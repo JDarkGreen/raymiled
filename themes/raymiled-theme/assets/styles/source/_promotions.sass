@@ -1,0 +1,36 @@
+
+/****************************************************************************/
+/**-- SECCION RELACIONADA A PAGINA PROMOCIONES  ---------------------------**/
+/****************************************************************************/
+
+//Contenedor
+.sectionContainerPromotions
+	background     : url('../../images/backgrounds/spa_promociones_belleza_peru_fondo.png') no-repeat
+	background-size: contain
+	margin         : 90px 0 0
+	min-height     : 527px
+	overflow       : hidden 
+
+//Contenedor carousel y flechas
+#containerPromotion
+	margin   : 0 30px
+	max-width: 475px
+	width    : 100%
+
+//Flechas de carousel
+.arrowCarousel__prom
+	color    : gray
+	display  : inline-block
+	font-size: 20px
+	margin   : -20px 0 0 0
+	position : absolute
+	top      : 50%
+	z-index  : 1
+	//:hover and focus
+	&:hover , &:focus 
+		color : gray
+	//Variaciones
+	&.arrow-prev
+		left: -30px
+	&.arrow-next
+		right: -30px

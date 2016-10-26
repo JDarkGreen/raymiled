@@ -1,0 +1,114 @@
+/** ARCHIVO DONDE SE ENCUENTRAN LOS CAROUSELES DEL TEMA **/
+
+
+/***************************************************************************************/
+/**-- 1.1 CAROUSEL SLIDER HOME   -----------------------------------------------------**/
+/***************************************************************************************/
+
+#carousel-home
+	//Contenido
+	.pageInicio__slider__content
+		color      : white
+		//Titulo
+		h2
+			color      : #545454
+			font-size  : 30px
+			font-weight: 600
+			margin     : 0 auto 14px
+		h3 
+			color    : #6D6D6D
+			font-size: 16px 
+
+		//button contact
+		a.button_contact
+			+border-radius( 6px )
+			+box-shadow( 0px 1px 5px #000 )
+			+transition( all 500ms cubic-bezier(.5,.5,.5,1) )
+			background-color: #15B4AA
+			box-sizing      : border-box
+			color           : rgb(255, 255, 255)
+			display         : inline-block
+			font-size       : 17px
+			font-style      : normal
+			line-height     : 1em
+			margin          : 43px 0
+			padding         : 15px
+			text-decoration : none
+			//Hovered
+			&:hover 
+				+scale( 1.09 )
+
+//Botones
+.tp-bullets.simplebullets.round 
+	.bullet
+		+border-radius( 50% )
+		+opacity( .8 )
+		+transition( all 500ms ease-in-out )
+		background: white 
+		border    : none
+		box-shadow: none
+		height    : 7px
+		margin    : 0 5px
+		width     : 7px
+		//Hover
+		&:hover 
+			+opacity( 1 )
+
+		
+
+/***************************************************************************************/
+/**-- 1.1 CAROUSEL SERVICIOS HOME  ---------------------------------------------------**/
+/***************************************************************************************/
+
+#carousel-services
+	//Item preview
+	.itemPreviewService
+		//Titulo
+		h2 
+			color    : white 
+			font-size: 13.5px 
+			margin   : 0 
+			padding  : 10px 0 
+		//Figure
+		figure 
+			background-size: cover
+			height         : 120px 
+			width          : 100%
+			margin         : 0 auto 14px 
+		//Extracto
+		.content-excerpt
+			font-size : 13.5px
+
+//Flechas de Carousel
+.arrowCarousel__services 
+	color          : #0074C3
+	font-size      : 35px 
+	text-decoration: none !important
+	display        : inline-block
+	margin         : 0 3px 
+	//focus 
+	&:focus 
+		text-decoration: none !important
+	//hover
+	&:hover 
+		+animation( pulse 1s ease-in-out infinite )
+
+/***************************************************************************************/
+/**-- 1.1 CAROUSEL SERVICIOS SINGLE  ---------------------------------------------------**/
+/***************************************************************************************/
+
+#carousel-single-service
+	//Item 
+	figure.imageGalleryService
+		background-size: cover 
+		height         : 230px 
+
+//Contenedor de Flechas
+.containerCarousel__services
+	background: #0073C3
+	a 
+		color          : white 
+		display        : inline-block
+		font-size      : 25px 
+		margin         : 0 4px 
+		text-decoration: none !important

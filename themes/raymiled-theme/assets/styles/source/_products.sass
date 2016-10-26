@@ -1,0 +1,105 @@
+
+/******************************************************************/
+/**-- SECCION RELACIONADA A PRODUCTOS  --------------------------**/
+/******************************************************************/
+
+
+//Contenedor Preview de Imágenenes
+.sectionPreviewProducts
+	padding : 45px 0
+
+//Item Preview de Carousel
+.itemProductPreview
+	border     : 1px solid silver 
+	box-sizing : border-box
+	display    : inline-block 
+	font-family: "Montserrat" , sans-serif
+	margin     : 0 auto 15px
+	min-height : 370px
+	overflow   : hidden
+	width      : 100%
+
+	//Imágen
+	figure.featured-image
+		max-height: 256px
+		overflow  : hidden
+		position  : relative
+		width     : 100%
+		img 
+			+transition( all 900ms ease )
+
+		//:hovered
+		&:hover 
+			img 
+				+scale( 1.15 )
+			.content-detail
+				+opacity( 1 )
+
+		//Calificador de Estrellas
+		.qualify-stars
+			bottom  : 14px
+			position: absolute 
+			right   : 14px
+			//Icon
+			i 
+				color: #8FD5BC
+	
+	//Contenedor Detalle
+	.content-detail
+		+opacity( 0 )
+		+transition ( all 800ms ease )
+		align-items    : center
+		background     : rgba(109,104,110,0.9)
+		bottom         : 0
+		display        : flex
+		justify-content: center
+		left           : 0
+		position       : absolute
+		right          : 0
+		top            : 0
+		//link
+		a.btn-to-link
+			+transition ( all 800ms ease )
+			+border-radius( 6px )
+			border         : 1px solid 
+			color          : white 
+			display        : inline-block
+			padding        : 5px 20px
+			text-decoration: none 
+			//
+			&:hover 
+				background: #15B4AA
+
+	//Contenedor texto
+	.content-text
+		padding: 0 30px 36px
+
+		//Título
+		h2 
+			font-size  : 14px
+			font-weight: 600
+
+		//Precio de texto
+		span.price-normal
+			margin: 0 2px
+			//tachado
+			&.strike-text
+				font-size      : 12px
+				text-decoration: line-through
+				+opacity( .4 )
+
+
+/**
+  * Contenedor de Página
+  */ 
+.sectionContainerProduct
+	padding : 70px 0
+
+	/* Item preview in this container */
+	.itemProductPreview
+		margin: 0 10px 60px 0
+		width : calc( (100%/4) - ( (3*10px) /4 ) )
+		
+		/* Cuarto elemento o final */
+		&:last-child , &:nth-child(4)
+			margin-right: 0

@@ -1,0 +1,586 @@
+/*----------------------------------------------------------------------------------*/
+/*--------------------- ARCHIVO DE SECCIONES COMUNES DE PÁGINA ---------------------*/
+/*----------------------------------------------------------------------------------*/
+
+/***************************************************************************************/
+/**-- SECCIONES - PAGINAS EN COMUN  --------------------------------------------------**/
+/***************************************************************************************/
+
+
+/** [ ALINEACIONES ] **/
+.aligncenter
+	display: block
+	margin : 0 auto
+
+.alignright	
+	float : right
+	margin: 0 0 1em 1em
+
+.alignleft	
+	float : left
+	margin: 0 1em 1em 0
+
+img.aligncenter, img.alignright, img.alignleft	
+	border: 3px solid transparent
+
+/***************************************************************************************/
+/**-- 1.1 POSICIONES Y CONTENEDORES --------------------------------------------------**/
+/***************************************************************************************/
+.containerRelative
+	position: relative
+/* MEDIDAS */
+.containerFullWidth
+	width: 100%
+/* CONTENEDOR DISPLAY FLEXIBLE */
+.containerFlex
+	display        : flex
+	flex-wrap      : wrap 
+// ===> Alineación de Contenidos <====	
+.containerAlignContent
+	align-content: center
+	align-items  : center
+// ===> Alineación de Contenido spacios <====
+.containerSpaceBetween
+	justify-content: space-between
+
+//==> Contenedor Común de Sección
+.containerCommonSection
+	background: #2D250F
+	padding   : 50px 0 
+
+/***************************************************************************************/
+/**-- 1.2 FLECHAS DE SLIDER  ---------------------------------------------------------**/
+/***************************************************************************************/
+/* Flechas de Slider en común */
+.arrow__common-slider
+	align-items    : center 
+//Variaciones
+.arrow__common-slider--prev
+	left: -40px
+.arrow__common-slider--next
+	right: -40px
+
+/***************************************************************************************/
+/**-- 1.3 SECCIÓN COMÚN BANNER  ------------------------------------------------------**/
+/***************************************************************************************/
+
+//Banner de Páginas
+.pageCommon__banner
+	background : #F0F0F0
+	color      : white
+	padding    : 0
+
+	//Título
+	h2.title-page
+		align-items    : center
+		bottom         : 0
+		display        : flex
+		font-family    : "Montserrat" , sans-serif
+		font-size      : 40px 
+		font-weight    : 600
+		justify-content: center
+		left           : 0 
+		margin         : 0
+		position       : absolute 
+		right          : 0
+		top            : 0
+
+	//Imagen
+	figure 
+		background-size: cover 
+		height         : 212px 
+		margin         : 0 auto 
+
+//Banner hacia contacto
+#sectionBannerContacto
+	background         : url("../../images/backgrounds/fondo_mas_informacion_contacto.jpg") no-repeat
+	background-position: center
+	background-size    : cover
+	height             : 242px
+	width              : 100%
+	//texto
+	.content-text
+		bottom         : 30px
+		justify-content: center 
+		left           : 0
+		position       : absolute 
+		right          : 0
+		top            : 30px 
+		//titulo
+		h2 
+			color      : white
+			font-family: "Open Sans",sans-serif
+			font-size  : 30px
+			margin     : 0 55px 0 0
+
+
+
+/***************************************************************************************/
+/**-- 1.4 BOTONES   ------------------------------------------------------------------**/
+/***************************************************************************************/
+//++ Botón Ver Más
+.btn-show-more
+	+border-radius( 6px )
+	+box-shadow( 0px 1px 5px #000 )
+	+transition( all 500ms cubic-bezier(.5,.5,.5,1) )
+	background-color: #FF9500
+	border          : none 
+	box-sizing      : border-box
+	color           : white
+	display         : inline-block
+	font-size       : 15px
+	font-style      : normal
+	line-height     : 1em
+	padding         : 15px 25px
+	//Hovered
+	&:hover 
+		+scale( 1.09 )
+		color          : white 
+		text-decoration: none
+
+//+++ Variación Fondo
+.btn-show-more--gray
+	background: #6F686F
+	
+
+//BOTÓN HACIA ARRIBA 
+#arrow-up-page
+	+transition( all 500ms ease )
+	background: #D0A63E
+	color     : white 
+	cursor    : pointer
+	display   : none 
+	font-size : 18px
+	padding   : 8px 12px
+	position  : fixed
+	right     : 3%
+	top       : 90%
+	z-index   : 999999
+
+/** [ BOTON COMÚN A SECCIONES ] **/
+.btnCommonMoretoPage
+	background     : #fff
+	color          : #000
+	display        : inline-block
+	font-size      : 14px
+	font-weight    : 700
+	line-height    : 1
+	padding        : 8px 10px
+	//Hover and focus 
+	&:hover , &:focus 
+		color          : black 
+		text-decoration: none 	
+	//ícono 
+	i 
+		font-size: 16px
+
+
+/***************************************************************************************/
+/**-- 1.5 TÍTULOS   ------------------------------------------------------------------**/
+/***************************************************************************************/
+//Titulo de Pagina
+.titleCommon__page
+	color      : #555555
+	font-family: "Roboto",sans-serif
+	font-size  : 40px
+	font-weight: 300
+	margin     : 5px 0 10px 0
+
+//Título de Sección
+.titleCommon__section
+	color      : white
+	font-family: "Open Sans",sans-serif
+	font-size  : 30px 
+	font-weight: 500
+	margin     : 0 auto 25px
+	position   : relative
+	&:after 
+		border  : 1px dotted rgba(255,255,255,.2)
+		content : ""
+		left    : 0 
+		position: absolute 
+		right   : 0
+		top     : 50%
+	span 
+		background: #2D250F
+		display   : inline-block
+		padding   : 0 25px
+		position  : relative
+		z-index   : 9
+
+//Subtitulo seccion 
+.subtitleCommon__section
+	color      : #c4a648
+	font-family: "SerifBeta",sans-serif
+	font-size  : 16px
+	font-style : italic
+	font-weight: 600
+	position   : relative
+
+	//span
+	span.decoration
+		left      : 0
+		margin    : 0 auto
+		position  : absolute
+		right     : 0
+		top       : -25px
+		&:before , &:after
+			border-top    : 1px dotted gray
+			content       : ""
+			display       : inline-block
+			vertical-align: middle
+			width         : 80px
+
+//Título Común de Categoría
+.titleCommon__category
+	font-family: "Impact"
+	font-size  : 35px 
+	margin     : 0 auto 20px 
+
+
+/***************************************************************************************/
+/**-- 1.6 REDES SOCIALES -------------------------------------------------------------**/
+/***************************************************************************************/
+
+//MENU DE REDES SOCIALES
+ul.menu-social-link
+	list-style-type: none 
+	margin         : 0 
+	padding        : 0
+	li 
+		+transition( all 500ms ease )
+		float  : left 
+		a 
+			border-right: 1px solid #8d8580
+			color       : #fff
+			display     : block
+			font-size   : 12px
+			margin      : 0
+			min-width   : 30px
+			padding     : 9px 16px
+		// Primer Elemento
+		&:first-child
+			a 
+				border-left: 1px solid #8d8580
+		
+		//Variaciones 
+		&.facebook
+			&:hover 
+				background: #4F72A6
+		&.twitter
+			&:hover 
+				background: #5AB2D5		
+		&.linkedin
+			&:hover 
+				background: #004076
+
+/***************************************************************************************/
+/**-- 1.7 IMAGENES -------------------------------------------------------------------**/
+/***************************************************************************************/
+//IMAGEN NOT BLUR ( NO DIFUMINADA )
+.imgNotBlur
+	+transform( scale(1.0) translateZ(0) )
+	-webkit-backface-visibility: hidden
+	backface-visibility        : hidden
+
+
+/***************************************************************************************/
+/**-- 1.8 GALERIA SLIDER -------------------------------------------------------------**/
+/***************************************************************************************/
+
+//Indicadores de Galería
+.gallery_indicators
+	margin: 15px auto 0 
+	//Indicador
+	.gallery_indicator
+		+border-radius( 50% )
+		+transition( all 500ms ease-in )
+		background     : #343434 
+		display        : inline-block
+		height         : 15px 
+		margin         : 0 4px 
+		text-decoration: none 
+		width          : 15px
+		//Activo u hover
+		&:hover , &.active 
+			background: #E421BB
+
+//Carousel Simple
+.section__single_gallery
+	figure 
+		margin: 0 auto
+
+/***************************************************************************************/
+/**-- 1.9 SEPARADORES ----------------------------------------------------------------**/
+/***************************************************************************************/
+
+//LINEA SEPARADORA
+#separator-line 
+	background: #7D767C
+	height    : 15px 
+	width     : 100%
+
+/***************************************************************************************/
+/**-- 1.10 SIDEBAR COMÚN -------------------------------------------------------------**/
+/***************************************************************************************/
+
+/** [ SIDEBAR ] **/
+.sidebarCommon
+	padding : 40px 0 30px
+	ul 
+		list-style-type: none 
+		margin         : 0
+		padding        : 0 
+		li 
+			a 
+				+transition( all 600ms ease-in-out )
+				border-bottom  : 1px solid silver 	
+				color          : #555555 
+				display        : block 
+				font-size      : 13px 
+				padding        : 6px 10px
+				position       : relative
+				text-decoration: none 
+
+				//after 
+				&:after 
+					content    : "\203A"
+					font-size  : 25px
+					line-height: 1
+					margin     : -12px 0 0
+					position   : absolute
+					right      : 10px
+					top        : 50%
+
+				//Hover
+				&:hover , &.active
+					background: #5D7683
+					color     : white 
+
+/***************************************************************************************/
+/**-- 1.11 PREVIEW BLOG DE POST ------------------------------------------------------**/
+/***************************************************************************************/
+
+//Slider de Post y preview de post
+.pagePreview_post
+	/* Artículos */
+	.articleItem
+		color      : black 
+		margin     : 0 auto 34px
+		/* Imagen */
+		figure 
+			margin   : 0 auto
+			overflow : hidden
+			img 
+				+transition( all 3s ease-in )
+		/* Titulo */
+		h3 
+			font-size: 16px
+			height   : 34px
+			margin   : 0 auto 20px 
+			overflow : hidden
+		/* Parrafo */
+		p 
+			font-size  : 14px
+			line-height: 1.4em 
+			/* Link del post */
+			a.read-more
+				display        : inline-block
+				text-decoration: none
+		/* Hover Article */
+		&:hover 
+			figure 
+				img 
+					+scale( 1.2 )
+
+
+/***************************************************************************************/
+/**-- 1.12 PAGINADOR -----------------------------------------------------------------**/
+/***************************************************************************************/
+
+.sectionPagination
+	span 
+		color    : #aaaaaa
+		display  : inline-block
+		font-size: 13.5px 
+		margin   : 0 8px 0 0
+	a 
+		+transition( all 500ms ease-in-out )
+		background     : transparent
+		border         : 1px solid transparent
+		color          : black 
+		display        : inline-block
+		font-size      : 16px
+		height         : 38px
+		padding        : 8px 0
+		text-decoration: none 
+		width          : 32px
+		//HOVER AND ACTIVE 
+		&:hover , &.active 
+			background: #F8F8F8
+			border    : 1px solid #EDEDED 
+
+		//Disabled
+		&.disabled 
+			+opacity( .5 )
+			cursor        : none 
+			pointer-events: none
+			z-index       : -1
+
+/***************************************************************************************/
+/**-- 1.13 MENU DE DATOS -------------------------------------------------------------**/
+/***************************************************************************************/
+
+.menuDataList
+	list-style-type: none 
+	margin         : 0 auto 30px 
+	padding        : 0 0 0 35px
+	li 
+		display  : flex
+		i 
+			height: 20px 
+			margin: 0 6px 0 -30px
+			width : 20px 
+
+/***************************************************************************************/
+/**-- 1.17 SECCIÓN COMPARTIR DE CADA POST O ELEMENTO  --------------------------------**/
+/***************************************************************************************/
+
+.sectionCommonShareLinks
+	ul 
+		list-style-type: none 
+		margin         : 0
+		padding        : 0
+		li 
+			display: inline-block
+			padding: 0 2px
+			//Primer Elemento
+			&:first-child
+				font-size: 15px 
+				padding  : 0 10px 0 0
+			//Item - a 
+			a 
+				background     : #E3E8E9 
+				color          : #A6A6A8
+				height         : 21px 
+				justify-content: center  
+				text-decoration: none 
+				width          : 21px
+				+transition( all 500ms ease-in-out )
+				//Hover
+				&:hover
+					color: white
+				//Clases Internas
+				&.social--fb
+					&:hover 
+						background: #11539C
+				&.social--tw
+					&:hover 
+						background: #00ACED
+				&.social--gplus
+					&:hover 
+						background: #DB4A39
+
+
+/***************************************************************************************/
+/**-- 1.18 SECCIÓN FACEBOOK  --------------------------------**/
+/***************************************************************************************/
+
+.sectionContentFacebook
+	background: #F2F2F2
+	display   : block 
+	padding   : 40px 0
+	//span 
+	span 
+		color      : silver
+		display    : block
+		font-size  : 18px
+		font-weight: bold
+		margin     : 0 auto 24px 
+	//Ícono
+	.icon-facebook
+		+border-radius( 50% )
+		+box-shadow( 0 0 0 4px transparent )
+		align-items    : center 
+		background     : #DCDCDC 
+		border         : 3px solid transparent 
+		color          : white 
+		display        : flex
+		height         : 73px 
+		justify-content: center 
+		text-decoration: none 
+		width          : 73px
+		+transition( all 200ms cubic-bezier(.5,.5,.5,1) )
+		//
+		i 
+			font-size: 40px
+		//Hover icon
+		&:hover 
+			+box-shadow( 0 0 0 4px #3B5998 )
+			background: #3B5998
+			border    : 3px solid white 
+
+/**[ SECTION FACEBOOK SHARE ]**/
+.section-share-post
+	color    : #555555
+	display  : inline-block
+	font-size: 14px
+	margin   : 20px 0 0 0
+	//icon 
+	i.icon-facebook
+		background   : #00418E
+		border-radius: 50%
+		color        : #fff
+		height       : 25px
+		padding      : 6px
+		text-align   : center
+		width        : 25px	
+
+/***************************************************************************************/
+/**-- 1.19 SECCION DE CLIENTES  --------------------------------**/
+/***************************************************************************************/
+
+.sectionCommon__clients
+	padding : 48px 0
+
+
+/***************************************************************************************/
+/**-- 1.20 BREADCRUMBS   -------------------------------------------------------------**/
+/***************************************************************************************/
+
+.breadcrumbs
+	border-bottom: 1px solid rgba(0,0,0,.1)
+	font-size    : 13px
+	margin       : 0 auto 10px
+	padding      : 0 0 10px 
+	a 
+		color          : #006B95
+		text-decoration: none 
+	span 
+		color : #555555
+
+
+/************************************************************/
+/**-- 1.21 VIDEOS DE YOUTUBE ------------------------------**/
+/************************************************************/
+
+.youtube 
+	background-position: center
+	background-repeat  : no-repeat
+	background-size    : cover 
+	cursor             : pointer
+	display            : block
+	overflow           : hidden
+	position           : relative
+	+transition( all 200ms ease-out )
+
+	.play 
+		+opacity(.8)
+		+transition( all 0.2s ease-out )
+		background     : url('../../images/icons/play.png') no-repeat center center
+		background-size: 40px
+		height         : 100%
+		position       : absolute
+		width          : 100%
+		&:hover
+			+opacity(1)

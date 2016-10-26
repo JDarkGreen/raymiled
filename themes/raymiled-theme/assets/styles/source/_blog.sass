@@ -1,0 +1,99 @@
+
+/*************************************************************/
+/**-- SECCION RELACIONADA AL BLOG --------------------------**/
+/*************************************************************/
+
+/** Contenedor de los preview Carousel **/
+#container-article-preview
+	border-right: 5px solid white 
+	padding     : 0 0 35px
+
+/** Preview de Items **/
+article.itemPreviewPost
+	background : white
+	display    : inline-block 
+	font-family: "Montserrat", sans-serif
+	margin     : 0 15px 16px 0
+	max-width  : 301px
+	padding    : 22px 27px
+	width      : 100%
+	//Imágen
+	figure.featured-image
+		margin    : 0 auto 33px
+		max-height: 187px
+		overflow  : hidden
+		img 
+			+transition( all 700ms ease )
+		//:hover
+		&:hover 
+			img 
+				+scale( 1.2 )
+	//Título
+	h2 
+		font-size  : 18px
+		font-weight: 600
+	//Párrafo
+	p 
+		font-size : 13px
+	//Link 
+	a.read-more
+		color          : #00948E
+		font-size      : 14px
+		text-decoration: none 
+
+
+/**
+  * Contenedor De 
+  * Página de Blog
+  */
+.sectionContainerBlog
+	padding : 100px 0
+
+	//Sobreescribir item preview
+	.itemPreviewPost
+		border   : 1px solid #EFEFEF
+		margin   : 0 5px 25px 0
+		max-width: calc( (100%/3) - ((2*5px)/3) )
+		width    : 100%
+		//Tercer y ultimo elemento
+		&:last-child , &:nth-child(3)
+			margin-right: 0
+
+/***************************************************************************************/
+/**-- SIDEBAR DE CATEGORIAS --------------------------------------------------**/
+/***************************************************************************************/
+
+.sidebarCategories
+	padding : 0 20px
+
+	//Título 
+	h2.title-sidebar
+		color         : black 
+		font-size     : 17px 
+		line-height   : 1
+		margin        : 0 auto 20px
+		text-transform: uppercase 
+
+	//Item Link
+	a.item-link
+		+transition( all 500ms ease-in )
+		color          : gray
+		display        : block 
+		font-size      : 15px
+		margin         : 0 0 10px
+		text-decoration: none !important
+
+		//before 
+		&:before 
+			+border-radius( 50% )
+			background    : gray 
+			content       : ""
+			display       : inline-block
+			height        : 4px 
+			margin-right  : 10px 
+			vertical-align: middle
+			width         : 4px 
+
+		//:hover 
+		&:hover , &.active
+			color : silver

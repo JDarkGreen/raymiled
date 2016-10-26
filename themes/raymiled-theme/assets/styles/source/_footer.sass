@@ -1,0 +1,108 @@
+/*----------------------------------------------------------------------------------*/
+/*--------------------- ARCHIVO FOOTER DE PÁGINA ----------------------------------*/
+/*----------------------------------------------------------------------------------*/
+
+footer#mainFooter
+	background: black
+	padding   : 35px 0 0 0
+
+//Logo Footer
+#logo-footer
+	margin   : 0 auto 25px
+	max-width: 140px
+
+/** Item Footer **/
+.itemFooter
+	border-right: 1px solid rgba( 255, 255 , 255 , .2 )
+	font-size   : 15px 
+	padding     : 0 35px 21px
+	width       : calc(100% / 3)
+	//Primer elemento
+	&:nth-child(3)
+		border-right: none
+	
+	//Títulos
+	h2.title-footer
+		color      : #fff
+		font-family: "Montserrat",sans-serif
+		font-size  : 18px
+		font-weight: 700
+		margin     : 0 auto 43px
+
+	//Parrafos
+	p 
+		color         : rgba(255,255,255,.7) 
+		display       : inline-block
+		font-size     : 12px 
+		line-height   : 1.8em
+		vertical-align: top
+
+/**[ Menú Contacto ]**/
+ul.menuContactoFooter
+	list-style-type: none 
+	padding        : 0 0 0 30px
+	li
+		color    : rgba( 255,255,255,.7)
+		font-size: 14px 
+		margin   : 0 auto 20px
+		//Address
+		&.address
+			p 
+				margin: 0
+		//Icon
+		i 
+			color : rgba( 255,255,255,.7)
+			margin: 0 10px 0 -30px
+			width : 14px
+		//Featured style 
+		&.featured
+			color : #7FC1A4
+
+
+/**[ Datos de Redes Sociales ]**/
+ul#menu-footer-social-link
+	list-style-type: none 
+	overflow       : hidden 
+	padding        : 0
+	li 
+		align-items    : center
+		border         : 1px solid rgba(255,255,255,.5)
+		display        : flex
+		float          : left 
+		height         : 40px
+		justify-content: center
+		margin         : 0 3px 0 0
+		width          : 40px
+		+transition( all 600ms ease )
+		a 
+			color : rgba(255,255,255,.7)
+		//variacion 
+		&.facebook
+			&:hover 
+				background: #4F72A6
+		&.twitter
+			&:hover 
+				background: #5AB2D5
+		&.linkedin
+			&:hover 
+				background: #004076
+		&.gplus
+			&:hover 
+				background: #D5371D
+		&.pinterest
+			&:hover 
+				background: #BD081C
+		&.instagram
+			&:hover 
+				background: #F85B13
+
+
+/**[ Texto Web ]**/
+.text-web
+	color    : #7FC1A4
+	font-size: 18px
+
+//++Seccion de Desarrollo
+.mainFooter__develop , .mainFooter__develop a
+	color    : #7FC1A4
+	font-size: 13px

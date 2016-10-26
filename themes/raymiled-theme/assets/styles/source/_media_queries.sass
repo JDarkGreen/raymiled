@@ -1,0 +1,226 @@
+
+/************************************************************************************/
+/*-- ARCHIVO PARCIAL DE MEDIA QUERIES  ---------------------------------------------*/
+/************************************************************************************/
+
+//568px
+@media ( max-width: 568px )
+
+	/** RESET **/
+	body.admin-bar
+		padding-bottom: 110px	
+
+	[canvas=container]
+		padding: 0 0 64px
+
+	/* 
+	 * -----------------------------
+	 * WRAPPER
+	 * -----------------------------
+	 */
+	.pageWrapperLayout
+		padding: 0 15px
+
+	/* 
+	 * -----------------------------
+	 * SECCIONES COMUNES 
+	 * -----------------------------
+	 */
+
+	/* BANNER CONTACTO */
+	#sectionBannerContacto 
+		.content-text 
+			h2
+				margin : 0 0 15px
+
+	/* 
+	 * -----------------------------
+	 * ARCHIVOS PARCIALES
+	 * -----------------------------
+	 */
+
+	/* SECCION NOSOTROS */
+	#sectionAboutUs 
+		#comment-extra
+			position: relative
+
+	/* 
+	 * -----------------------------
+	 * INICIO HOME 
+	 * -----------------------------
+	 */
+
+	/** Carousel Inicio **/
+	#carousel-home
+		height: 280px !important
+	
+		.pageInicio__slider__content
+			padding    : 20px
+			white-space: normal
+			//
+			h2 , h3 
+				color : black 
+				+text-shadow( 1px 2px 11px #fff )
+			// 
+			a.button_contact
+				margin: 10px 0
+
+
+	/* SECCION BLOG */
+	#container-article-preview
+		border: none 
+
+	/* 
+	 * -----------------------------
+	 * SERVICIOS
+	 * -----------------------------
+	 */
+	.itemSingleServicePreview
+		margin: 0 auto 40px
+		width : 100%
+
+	.sectionContainerService
+		padding: 22px 0
+
+	/** Single **/
+	.mainContainerService 
+		margin : 30px auto
+		padding: 0 15px
+		
+		figure.featured-image
+			+box-shadow( none )
+			background-size: contain 
+			height         : 245px
+		
+		.container-text
+			padding : 10px 0 0 0
+			position: relative
+			right   : 0
+
+	/* 
+	 * -----------------------------
+	 * PRODUCTOS
+	 * -----------------------------
+	 */
+
+	.sectionContainerProduct
+		padding: 20px 0 
+		.itemProductPreview
+			margin: 0 0 20px
+			width : 100%
+
+	/* 
+	 * -----------------------------
+	 * PROMOCIONES 
+	 * -----------------------------
+	 */
+	.sectionContainerPromotions
+		background: rgba(0,0,0,.1)
+		margin    : 20px 0 0
+		min-height: initial 
+		padding   : 20px 0
+		
+		#containerPromotion
+			margin: 0 auto
+
+	/* 
+	 * -----------------------------
+	 * MULTIMEDIA
+	 * -----------------------------
+	 */
+	.sectionContainerMultimedia
+		padding: 20px 0
+
+		&.bgFeaturedImage
+			padding-bottom: 110px
+
+	/** Imágenes **/
+	.itemPreviewImage
+		width : 100%
+
+	/** Videos **/
+	.itemVideoPreview
+		margin: 0 auto 20px
+		width : 100%
+
+	/* 
+	 * -----------------------------
+	 * BLOG
+	 * -----------------------------
+	 */
+	.sectionContainerBlog 
+		.itemPreviewPost
+			max-width : initial
+
+	/* 
+	 * -----------------------------
+	 * CONTACTO
+	 * -----------------------------
+	 */
+
+	/*Contenedor */
+	.sectionContainerContact
+		padding: 20px 0
+
+	/* Titulo Contacto */
+	.title-contact
+		font-size: 30px
+	
+	/* Grupo Formulario */
+	.pageContacto__form__group
+		&.special-group
+			width : 100%
+	
+
+	/* 
+	 * -----------------------------
+	 * HEADER
+	 * -----------------------------
+	 */
+
+	.mainHeader
+		background     : #7D767C
+		justify-content: center
+
+		//Icon Header
+		.icon-header
+			color      : white 
+			display    : inline-block
+			font-size  : 50px
+			height     : 50px
+			line-height: 1em 
+			margin     : 0 3px 
+			overflow   : hidden
+			width      : 50px
+
+		//Logo
+		#mainLogo
+			max-width: 185px
+			padding  : 10px 0
+
+	/** MAIN NAVIGATION **/
+	nav.mainNavigation 
+		ul 
+			li
+				display: block 
+				padding: 10px 
+				a 
+					padding   : 20px
+					text-align: left
+
+			//Submenu
+			&.sub-menu 
+				background: #61D5CD
+				left      : 0 
+				right     : 0
+
+	/* 
+	 * -----------------------------
+	 * FOOTER
+	 * -----------------------------
+	 */
+
+	.itemFooter
+		width : 100%
+		border: none 
+

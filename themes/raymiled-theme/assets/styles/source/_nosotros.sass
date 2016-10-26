@@ -1,0 +1,79 @@
+
+/***************************************************************************************/
+/**-- SECCION RELACIONADA A PAGINA NOSOTROS  -----------------------------------------**/
+/***************************************************************************************/
+
+/* 
+ * SECCION NOSOTROS
+ */
+
+#sectionAboutUs
+	font-family: "Arial" , sans-serif 
+	padding    : 40px 0
+
+	//Imagenes
+	figure.featured-image
+		margin : 0
+
+	//Title
+	h2.title 
+		color    : #555555
+		font-size: 30px 
+		margin   : 0 auto 20px
+	
+	//Párrafos
+	p , ul 
+		color    : #aaaaaa
+		font-size: 14px
+
+	//Lista
+	ul 
+		padding : 0 0 0 15px 
+
+	//Comentario Extra
+	#comment-extra
+		background: #61D5CD
+		bottom    : 0
+		color     : white
+		margin    : 38px 0
+		max-width : 334px
+		padding   : 80px 60px
+		position  : absolute
+		right     : 0
+		top       : 0
+		width     : 100%
+
+		//Título
+		h3 
+			line-height: 1.3em 
+			margin     : 0
+
+/* 
+ * SECCION MIEMBROS DE STAFF
+ */
+#sectionStaffMembers
+	background: #F8F8F8
+	padding   : 45px 0
+
+	//Título
+	h2.title 
+		background         : url(../../images/backgrounds/bg_title.png) no-repeat
+		background-position: center bottom
+		color              : #545454
+		padding            : 0px 0 30px
+
+	/*Figure o image*/
+	figure.itemImageMember
+		+border-radius( 50% )
+		margin   : 0 30px 30px
+		max-width: 213px
+		overflow : hidden
+		width    : 100%
+		+transition( all 700ms ease-in-out )
+		img 
+			+transition( all 700ms ease-in-out )
+		//Hover
+		&:hover 
+			+opacity( .8 )
+			img 
+				+scale( 1.2)

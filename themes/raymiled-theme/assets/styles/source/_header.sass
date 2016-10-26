@@ -1,0 +1,97 @@
+/*----------------------------------------------------------------------------------*/
+/*--------------------- ARCHIVO HEADER  DE PÁGINA ----------------------------------*/
+/*----------------------------------------------------------------------------------*/
+
+
+//---------------------------*
+// BARRA TOP 
+//---------------------------*
+
+#topBarHeader
+	background : #2A2103
+
+//---------------------------*
+// HEADER MAIN
+//---------------------------*
+
+//MainLogo
+#mainLogo
+	margin : 0
+	padding: 24px 0
+	+transition( all 500ms ease )
+	+scale( 0.95 )
+	//hover 
+	&:hover 
+		+opacity( .8 )
+		+scale( 1 )
+
+//---------------------------*
+// MAIN NAVIGATION
+//---------------------------*
+
+/*Navigation*/
+nav.mainNavigation
+	background : rgba( 42 , 33 , 3 , .8 )
+	font-family: 'Open Sans', sans-serif
+	font-size  : 14px
+	font-weight: 300
+	left       : 0
+	position   : fixed
+	right      : 0
+	top        : 136px
+	z-index    : 999
+
+	//Ul
+	ul 
+		list-style-type: none 
+		margin         : 0
+		padding        : 0
+		li 
+			display   : inline-block
+			padding   : 10px
+			position  : relative
+			+transition( all 600ms ease )
+			a 
+				+border-radius( 5px )
+				+transition( all 600ms ease )
+				color          : white
+				display        : block
+				line-height    : 1em 
+				padding        : 14px 13px 4px
+				position       : relative
+				text-align     : center
+				text-decoration: none 
+				z-index        : 999999
+
+			//Hover li 
+			&:hover , &.current-menu-item , &.current_page_item 
+
+				//Hovered submenu
+				ul.sub-menu
+					+opacity( 1 )
+					top       : 105%
+					visibility: visible 
+					z-index   : 99999999999
+				//Link
+				a 
+					color : #15B4AA
+
+		//Submenu
+		&.sub-menu 
+			+opacity( 0 )
+			+transition( all 700ms ease )
+			background: rgba(0,0,0,.5)
+			position  : absolute 
+			top       : 115%
+			visibility: hidden
+			z-index   : -1
+			li 
+				border : none
+				padding: 10px
+				a 
+					background: transparent
+				//hover 
+				&:hover , &.current-menu-item , &.current_page_item 
+					a 
+						background: #15B4AA
+
