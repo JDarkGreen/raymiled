@@ -5,18 +5,9 @@
 	$options = get_option("theme_settings");
 
 	#Email soportado
-	$admin_email = isset($options['theme_email_text']) && !empty($options['theme_email_text']) ? $options['theme_email_text'] : 'informes@aquaspa.com';
+	$admin_email = isset($options['theme_email_text']) && !empty($options['theme_email_text']) ? $options['theme_email_text'] : 'info@raymipistasled.com';
 	
-	/*
-	#Password
-	$admin_email_password = isset($options['theme_email_password']) && !empty($options['theme_email_password']) ? $options['theme_email_password'] : '';
 
-	#Copias
-	$admin_email_copias = isset($options['theme_email_copias']) && !empty($options['theme_email_copias']) ? $options['theme_email_copias'] : '';
-	$admin_email_copias = explode( "," , trim( $admin_email_copias ) );*/
-
-	#var_dump($admin_email_copias);exit;
-	
 	//Obtenemos las valores enviados
 	$name    = $_POST['name'];
 	$email   = $_POST['email'];
@@ -34,20 +25,11 @@
 	 * Añadidos de Prueba
 	 */
 	$webmaster_email2 = "jgomez@ingenioart.com";
-	$webmaster_email3 = "webmaster@ingenioart.com";
 
 	include("class.phpmailer.php");
  	include("class.smtp.php");
 
 	$mail = new PHPMailer();
-
-	/*$mail->IsSMTP(); // send via SMTP
-	$mail->SMTPSecure = 'ssl'; 
-	$mail->Host      = 'smtp.gmail.com';  // Specify main and backup SMTP servers
-	$mail->Port      = 465;
-	$mail->SMTPAuth  = true; // turn on SMTP authentication
-	$mail->Username  = "jgomez.4net@gmail.com"; // Enter your SMTP username
-	$mail->Password  = ""; // SMTP password */
 
 	$mail->From     = $email;
 	$mail->FromName = $name;
@@ -57,21 +39,11 @@
 	 * Añadidos de Prueba
 	 */
 	$mail->AddAddress( $webmaster_email2 );
-	$mail->AddAddress( $webmaster_email3 );
 
-	#Enviar las copias
-	/*foreach( $admin_email_copias as $copia ):
-
-		#Quitar espacios en blanco
-		$copia = str_replace(' ', '', $copia);
-
-		$mail->AddAddress( $copia );
-
-	endforeach;*/
 
 	$mail->IsHTML(true); // send as HTML
 
-	$mail->Subject = "Formulario Web: Aqua Spa";
+	$mail->Subject = utf8_decode( "Formulario Web: Raymiled");
 
 	// Activar el almacenamiento en búfer de la salida
 	ob_start();

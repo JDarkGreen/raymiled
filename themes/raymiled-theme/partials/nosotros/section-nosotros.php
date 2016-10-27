@@ -38,7 +38,11 @@ $options = get_option("theme_settings");
 				</h2>
 
 				<!-- Contenido -->
-				<?= apply_filters( 'the_content' , $page_nosotros->post_content ); ?>
+				<?php  
+					$texto_nosotros = $page_nosotros->post_content;
+					$texto_nosotros = wp_trim_words( $texto_nosotros , 50 , '...' );
+					echo apply_filters( 'the_content' , $texto_nosotros );
+				?>
 
 				<!-- Botón ver Más -->
 				<a href="<?= $page_nosotros_link; ?>" class="btn-show-more text-uppercase"> 
