@@ -18,7 +18,9 @@ $the_title = isset($banner_title) && !empty($banner_title) ? $banner_title : $th
 $id_banner = isset($banner) && !empty($banner) ? $banner->ID : get_queried_object_id();
 
 //url de Imágen 
-$url_image = has_banner_page( $id_banner ) ? get_banner_page( $id_banner ) : 'https://unsplash.it/1920/314/?random';
+$url_image = has_banner_page( $id_banner ) ? get_banner_page( $id_banner ) : IMAGES . '/backgrounds/bg_raymi_pisos_led_peru.jpg';
+
+//Setear Ruta directamente
 
 /*
  * Renderizando el banner

@@ -41,14 +41,14 @@ include( locate_template('partials/banner-top-page.php') );
 ?>
 
 <!-- Contenedor Sección -->
-<section class="sectionContainerPromotions">
+<section id="sectionContainerPromotions" class="containerBgAndCarousel">
 	
 	<!-- Wrapper de Contenido / Contenedor Layout -->
 	<div class="pageWrapperLayout containerRelative">
 
 
 		<!-- Contenedor de Carousel y flechas -->
-		<div id="containerPromotion" class="containerRelative pull-sm-right">
+		<div class="content-information containerRelative pull-sm-right">
 
 			<?php if( count($promotions) >= 2 ): ?>
 
@@ -73,34 +73,25 @@ include( locate_template('partials/banner-top-page.php') );
 
 			</div> <!-- /.carousel-promotions -->
 
-			<?php else: ?>
-
-				<!-- Imagen -->
-				<?php if( has_post_thumbnail( $promotions[0]->ID ) ): 
-
-					$url_img = wp_get_attachment_url( get_post_thumbnail_id( $promotions[0]->ID ) );
-				?>
-					<!-- Galeria -->
-					<a href="<?= $url_img ?>" class="gallery-fancybox" title="<?= $promotions[0]->post_title; ?>" rel="promotion">
-						<?= get_the_post_thumbnail( $promotions[0]->ID , 'full' , array('class'=>'img-fluid d-block m-x-auto') ); ?>
-					</a>
-
-				<?php endif; ?>
-
-			<?php endif; ?>
-
 			<!-- Flechas -->
 			<div class="">
 	
-				<a href="#" class="arrowCarousel__prom arrow-prev js-carousel-prev" data-slider="carousel-promotions">
+				<a href="#" class="arrowCarousel arrow-prev js-carousel-prev" data-slider="carousel-promotions">
 					<i class="fa fa-chevron-left" aria-hidden="true"></i>
 				</a>
 
-				<a href="#" class="arrowCarousel__prom arrow-next js-carousel-next" data-slider="carousel-promotions">
+				<a href="#" class="arrowCarousel arrow-next js-carousel-next" data-slider="carousel-promotions">
 					<i class="fa fa-chevron-right" aria-hidden="true"></i>
 				</a>
-
 			</div> <!-- /end of arrows -->
+
+			<?php else: ?>
+
+				<div class="alert alert-warning" role="alert">
+					<strong> Ops!</strong> Por el momento este contenido está en mantenimiento. Gracias
+				</div>
+
+			<?php endif; ?>
 
 		</div> <!-- #containerPromotion -->
 

@@ -48,6 +48,44 @@ img.aligncenter, img.alignright, img.alignleft
 	background: #2D250F
 	padding   : 50px 0 
 
+//==> CONTENEDOR COMUN EN PÁGINAS 
+// QUE TIENEN CAROUSEL 
+.containerBgAndCarousel
+	background-size: cover !important
+	margin         : 90px 0 0
+	min-height     : 527px
+	overflow       : hidden 
+	padding        : 0 0 50px
+
+	//Contenido de la sección
+	.content-information
+		margin   : 0 50px
+		max-width: 475px
+		width    : 100%
+
+	.content-information--margin 
+		margin: 0 15%
+		width : initial 
+
+	//Flechas de Carousel 
+	.arrowCarousel
+		color    : gray
+		display  : inline-block
+		font-size: 20px
+		position : absolute
+		top      : 50% 
+		z-index  : 1
+
+		//:hover and focus
+		&:hover , &:focus 
+			color : gray
+		//Variaciones
+		&.arrow-prev
+			left: -30px
+		&.arrow-next
+			right: -30px
+
+
 /***************************************************************************************/
 /**-- 1.2 FLECHAS DE SLIDER  ---------------------------------------------------------**/
 /***************************************************************************************/
@@ -72,6 +110,7 @@ img.aligncenter, img.alignright, img.alignleft
 
 	//Título
 	h2.title-page
+		+text-shadow( 1px 1px 6px black )
 		align-items    : center
 		bottom         : 0
 		display        : flex
@@ -93,7 +132,7 @@ img.aligncenter, img.alignright, img.alignleft
 
 //Banner hacia contacto
 #sectionBannerContacto
-	background         : url("../../images/backgrounds/fondo_mas_informacion_contacto.jpg") no-repeat
+	background         : url("../../images/backgrounds/info_baner_raymi_pisos_led_peru.jpg") no-repeat
 	background-position: center
 	background-size    : cover
 	height             : 242px

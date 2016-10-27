@@ -1,7 +1,7 @@
-<?php /* Template Name: Página Servicios Template */
+<?php /* Template Name: Página Pistas Led Template */
 /**
  * Esta es la plantilla que despliega la informacion de la página
- * Servicios
+ * Pistas Led
  *
  */
 
@@ -27,51 +27,94 @@ $options = get_option("theme_settings");
 include( locate_template('partials/banner-top-page.php') );
 
 /*
+ * Variables de Paginación
+ */
+$posts_per_page = 6;
+$paged = get_query_var('paged') ? get_query_var('paged') : 1;
+
+/*
  * Obtener todos los servicios
  */ 
-	$args        = array('posts_per_page'=>-1,'post_type' =>'theme-services','order'=>'ASC','orderby'=>'menu_order','post_status'=>'publish');
+$args  = array(
+	'posts_per_page' => $posts_per_page,
+	'post_type'      => 'theme-services',
+	'paged'          => $paged,
+	'order'          => 'ASC',
+	'orderby'        => 'menu_order',
+	'post_status'    => 'publish',
+);
 	
-	$services    = get_posts( $args );
+$the_query = new WP_Query( $args ); 
+
 ?>
 
 <!-- Contenedor Sección -->
 <section class="sectionContainerService">
 	
 	<!-- Wrapper de Contenido / Contenedor Layout -->
-	<div class="pageWrapperLayout containerFlex">
+	<div class="pageWrapperLayout">
 
-		<?php foreach( $services as $service ): ?>
+		<?php if( $the_query->have_posts() ): ?>
 
-			<!-- Articles -->
-			<article class="itemSingleServicePreview containerRelative">
-				
-				<!-- Imagen -->
-				<?php  
-					$feat_img = wp_get_attachment_url( get_post_thumbnail_id( $service->ID ) );
-				?>
-				<figure class="featured-image">
-					<a href="<?= get_permalink( $service->ID ); ?>">
-						<img src="<?= $feat_img; ?>" alt="<?= $service->post_name; ?>" class="img-fluid d-block m-x-auto" />
-					</a> <!-- / -->
-				</figure>
+		<div class="containerFlex">
+	
+			<?php while( $the_query->have_posts() ): $the_query->the_post(); ?>
 
-				<!-- CONTENEDOR DE TEXTO -->
-				<div class="container-text text-xs-center">
+				<!-- Articles -->
+				<article class="itemSingleServicePreview containerRelative">
 					
-					<!-- Nombre -->
-					<h2 class="text-capitalize"><?= $service->post_title; ?></h2>
+					<!-- Imagen -->
+					<?php  
+						$feat_img = wp_get_attachment_url( get_post_thumbnail_id() );
+					?>
+					<figure class="featured-image">
+						<a href="<?= get_permalink(); ?>">
+							<img src="<?= $feat_img; ?>" alt="<?= get_the_title(); ?>" class="img-fluid d-block m-x-auto" />
+						</a> <!-- / -->
+					</figure>
 
-					<!-- Extracto -->
-					<p class="excerpt"> <?= $service->post_excerpt; ?> </p>
-					
-					<!-- Botón -->
-					<a href="<?= get_permalink( $service->ID ); ?>" class="btn-show-more text-uppercase"><?= __('leer más' , LANG ); ?></a>
-					
-				</div> <!-- /.container-text -->
+					<!-- CONTENEDOR DE TEXTO -->
+					<div class="container-text text-xs-center">
+						
+						<!-- Nombre -->
+						<h2 class="text-capitalize"><?= get_the_title(); ?></h2>
 
-			</article> <!-- /.itemServicePreview -->
+						<!-- Extracto -->
+						<p class="excerpt"> <?= get_the_excerpt(); ?> </p>
+						
+						<!-- Botón -->
+						<a href="<?= get_permalink(); ?>" class="btn-show-more text-uppercase"><?= __('leer más' , LANG ); ?></a>
+						
+					</div> <!-- /.container-text -->
 
-		<?php endforeach; ?>
+				</article> <!-- /.itemServicePreview -->
+
+			<?php endwhile; ?>
+			
+		</div> <!-- /.containerFlex -->
+
+		<!-- Limpiar Floats --> <div class="clearfix"></div>
+
+		<!-- Paginación aquí -->
+		<section class="sectionPagination text-xs-center">
+
+			<?php $max_pages = $the_query->max_num_pages; ?>
+			
+			<?php for( $i = 1 ; $i <= $max_pages ; $i++ ) { ?>
+			
+			<!-- Link -->
+			<a href="<?= get_pagenum_link($i); ?>" class="<?= $paged == $i ? 'active' : '' ?>"> <?= $i ?></a>
+
+			<?php } ?>
+			
+			<!-- Next -->
+			<a href="<?= get_pagenum_link($paged+1); ?>" class="<?= $paged == $max_pages ? 'disabled' : '' ?>" role="button" aria-disabled="<?= $paged == $max_pages ? 'true' : '' ?>">
+				<!-- Icon --><i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+			</a>
+			
+		</section> <!-- /.sectionPagination -->
+
+		<?php endif; wp_reset_postdata(); ?>
 
 	</div> <!-- /.pageWrapperLayout containerRelative -->
 

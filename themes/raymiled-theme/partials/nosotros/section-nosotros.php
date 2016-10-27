@@ -30,7 +30,7 @@ $options = get_option("theme_settings");
 		<div class="row containerFlex">
 			
 			<!-- Apertura -->
-			<div class="col-xs-12 col-sm-3">
+			<div class="col-xs-12 col-sm-4">
 
 				<!-- titulo -->
 				<h2 class="title text-capitalize"> 
@@ -48,10 +48,10 @@ $options = get_option("theme_settings");
 				<a href="<?= $page_nosotros_link; ?>" class="btn-show-more text-uppercase"> 
 				<?= __('leer más'); ?> </a>
 
-			</div> <!-- /.col-xs-12 col-sm-3 -->
+			</div> <!-- /.col-xs-12 col-sm-4 -->
 
 			<!-- Imágen Destacada -->
-			<div class="col-xs-12 col-sm-6">
+			<div class="col-xs-12 col-sm-5">
 				
 				<figure class="featured-image">
 					<?php if( has_post_thumbnail($page_nosotros->ID) ) : ?>
@@ -60,14 +60,14 @@ $options = get_option("theme_settings");
 					
 					<?php else: ?>
 
-						<img src="<?= IMAGES ?>/backgrounds/nosotros_fondo_foto.jpg" alt="<?= $page_nosotros->post_name; ?>" class="img-fluid d-block m-x-auto" />
+						<img src="<?= IMAGES ?>/backgrounds/foto_nosotros_raymi_pisos_led_peru.jpg" alt="<?= $page_nosotros->post_name; ?>" class="img-fluid d-block m-x-auto" />
 
 					<?php endif; ?>
 				</figure> <!-- /.featured-image -->
 
-			</div> <!-- /.col-xs-12 col-sm-6 -->
+			</div> <!-- /.col-xs-12 col-sm-5 -->
 
-			<div class="col-sm-2 hidden-xs-down"></div>
+			<div class="col-sm-3 hidden-xs-down"></div>
 
 		</div> <!-- /.row -->
 
