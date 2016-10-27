@@ -1,6 +1,6 @@
 # WordPress MySQL database migration
 #
-# Generated: Wednesday 26. October 2016 22:56 UTC
+# Generated: Thursday 27. October 2016 21:33 UTC
 # Hostname: localhost
 # Database: `raymiled`
 # --------------------------------------------------------
@@ -83,7 +83,7 @@ CREATE TABLE `wp_comments` (
 # Data contents of table `wp_comments`
 #
 INSERT INTO `wp_comments` ( `comment_ID`, `comment_post_ID`, `comment_author`, `comment_author_email`, `comment_author_url`, `comment_author_IP`, `comment_date`, `comment_date_gmt`, `comment_content`, `comment_karma`, `comment_approved`, `comment_agent`, `comment_type`, `comment_parent`, `user_id`) VALUES
-(1, 1, 'Un comentarista de WordPress', 'wapuu@wordpress.example', 'https://wordpress.org/', '', '2016-10-26 20:18:29', '2016-10-26 20:18:29', 'Hola, esto es un comentario.\nPara empezar a moderar, editar y borrar comentarios, por favor, visite la pantalla de comentarios en el escritorio.\nLos avatares de los comentaristas provienen de <a href="https://gravatar.com">Gravatar</a>.', 0, '1', '', '', 0, 0) ;
+(1, 1, 'Un comentarista de WordPress', 'wapuu@wordpress.example', 'https://wordpress.org/', '', '2016-10-26 20:18:29', '2016-10-26 20:18:29', 'Hola, esto es un comentario.\nPara empezar a moderar, editar y borrar comentarios, por favor, visite la pantalla de comentarios en el escritorio.\nLos avatares de los comentaristas provienen de <a href="https://gravatar.com">Gravatar</a>.', 0, 'post-trashed', '', '', 0, 0) ;
 
 #
 # End of data contents of table `wp_comments`
@@ -149,7 +149,7 @@ CREATE TABLE `wp_options` (
   `autoload` varchar(20) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'yes',
   PRIMARY KEY (`option_id`),
   UNIQUE KEY `option_name` (`option_name`)
-) ENGINE=InnoDB AUTO_INCREMENT=193 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=230 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 
 #
@@ -260,7 +260,7 @@ INSERT INTO `wp_options` ( `option_id`, `option_name`, `option_value`, `autoload
 (101, 'widget_calendar', 'a:1:{s:12:"_multiwidget";i:1;}', 'yes'),
 (102, 'widget_tag_cloud', 'a:1:{s:12:"_multiwidget";i:1;}', 'yes'),
 (103, 'widget_nav_menu', 'a:1:{s:12:"_multiwidget";i:1;}', 'yes'),
-(104, 'cron', 'a:5:{i:1477556310;a:3:{s:16:"wp_version_check";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:17:"wp_update_plugins";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:16:"wp_update_themes";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}}i:1477556425;a:1:{s:36:"check_plugin_updates-wp-media-folder";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}}i:1477599596;a:1:{s:19:"wp_scheduled_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}i:1477602073;a:1:{s:30:"wp_scheduled_auto_draft_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}s:7:"version";i:2;}', 'yes'),
+(104, 'cron', 'a:5:{i:1477642710;a:3:{s:16:"wp_version_check";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:17:"wp_update_plugins";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:16:"wp_update_themes";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}}i:1477642825;a:1:{s:36:"check_plugin_updates-wp-media-folder";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}}i:1477685996;a:1:{s:19:"wp_scheduled_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}i:1477688473;a:1:{s:30:"wp_scheduled_auto_draft_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}s:7:"version";i:2;}', 'yes'),
 (120, 'can_compress_scripts', '1', 'no'),
 (138, 'recently_activated', 'a:0:{}', 'yes'),
 (139, 'wpmf_use_taxonomy', '1', 'yes'),
@@ -296,14 +296,16 @@ INSERT INTO `wp_options` ( `option_id`, `option_name`, `option_value`, `autoload
 (172, 'wpmf_weight_selected', '[["0-61440","kB"],["61440-122880","kB"],["122880-184320","kB"],["184320-245760","kB"],["245760-307200","kB"]]', 'yes'),
 (173, 'wpmf_color_singlefile', '{"bgdownloadlink":"#444444","hvdownloadlink":"#888888","fontdownloadlink":"#ffffff","hoverfontcolor":"#ffffff"}', 'yes'),
 (174, 'wpmf_option_singlefile', '0', 'yes'),
-(175, 'external_updates-wp-media-folder', 'O:8:"stdClass":3:{s:9:"lastCheck";i:1477513228;s:14:"checkedVersion";s:5:"3.3.3";s:6:"update";O:8:"stdClass":7:{s:2:"id";i:0;s:4:"slug";s:15:"wp-media-folder";s:7:"version";s:5:"3.8.3";s:8:"homepage";s:61:"https://www.joomunited.com/wordpress-products/wp-media-folder";s:12:"download_url";s:120:"https://www.joomunited.com/index.php?option=com_juupdater&task=download.download&extension=wp-media-folder&version=3.8.3";s:14:"upgrade_notice";s:29:"Upgrade to the latest version";s:8:"filename";s:35:"wp-media-folder/wp-media-folder.php";}}', 'no'),
+(175, 'external_updates-wp-media-folder', 'O:8:"stdClass":3:{s:9:"lastCheck";i:1477584967;s:14:"checkedVersion";s:5:"3.3.3";s:6:"update";O:8:"stdClass":7:{s:2:"id";i:0;s:4:"slug";s:15:"wp-media-folder";s:7:"version";s:5:"3.8.3";s:8:"homepage";s:61:"https://www.joomunited.com/wordpress-products/wp-media-folder";s:12:"download_url";s:120:"https://www.joomunited.com/index.php?option=com_juupdater&task=download.download&extension=wp-media-folder&version=3.8.3";s:14:"upgrade_notice";s:29:"Upgrade to the latest version";s:8:"filename";s:35:"wp-media-folder/wp-media-folder.php";}}', 'no'),
 (178, '_wpmf_import_notice_flag', 'yes', 'yes'),
 (179, 'theme_mods_twentysixteen', 'a:1:{s:16:"sidebars_widgets";a:2:{s:4:"time";i:1477514806;s:4:"data";a:2:{s:19:"wp_inactive_widgets";a:0:{}s:9:"sidebar-1";a:6:{i:0;s:8:"search-2";i:1;s:14:"recent-posts-2";i:2;s:17:"recent-comments-2";i:3;s:10:"archives-2";i:4;s:12:"categories-2";i:5;s:6:"meta-2";}}}}', 'yes'),
 (180, 'current_theme', 'Raymiled Theme', 'yes'),
 (181, 'theme_mods_raymiled-theme', 'a:2:{i:0;b:0;s:18:"nav_menu_locations";a:1:{s:9:"main-menu";i:3;}}', 'yes'),
 (182, 'theme_switched', '', 'yes'),
 (184, 'nav_menu_options', 'a:2:{i:0;b:0;s:8:"auto_add";a:0:{}}', 'yes'),
-(190, 'wpmf-category_children', 'a:0:{}', 'yes') ;
+(215, 'wpmf-category_children', 'a:1:{i:6;a:1:{i:0;i:7;}}', 'yes'),
+(218, 'theme_settings', 'a:15:{s:20:"theme_social_fb_text";s:39:"https://www.facebook.com/Ingenioartweb/";s:25:"theme_social_twitter_text";s:0:"";s:25:"theme_social_youtube_text";s:0:"";s:27:"theme_social_instagram_text";s:0:"";s:26:"theme_social_linkedin_text";s:0:"";s:23:"theme_social_gplus_text";s:0:"";s:27:"theme_social_pinterest_text";s:0:"";s:17:"theme_footer_text";s:287:"La Pista de Baile Iluminada está conformada por módulos de 1 m2, con  una altura de 11cm, elaborada en combinado cuadros metálicos , elementos electrónicos , LED y acrílico. \nSu funcionamiento es controlado , posee coreografías que van al ritmo de la música con efectos y colores.";s:18:"theme_phone_text_1";s:12:"888-567-7894";s:18:"theme_phone_text_2";s:12:"888-567-7894";s:16:"theme_cel_text_1";s:0:"";s:16:"theme_cel_text_2";s:0:"";s:16:"theme_email_text";s:23:"info@raymipistasled.com";s:18:"theme_address_text";s:12:"Lima - Perú";s:19:"theme_atention_text";s:29:"8am - 8pm |  Lunes  - Viernes";}', 'yes'),
+(219, 'category_children', 'a:0:{}', 'yes') ;
 
 #
 # End of data contents of table `wp_options`
@@ -330,7 +332,7 @@ CREATE TABLE `wp_postmeta` (
   PRIMARY KEY (`meta_id`),
   KEY `post_id` (`post_id`),
   KEY `meta_key` (`meta_key`(191))
-) ENGINE=InnoDB AUTO_INCREMENT=169 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=188 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 
 #
@@ -350,7 +352,7 @@ INSERT INTO `wp_postmeta` ( `meta_id`, `post_id`, `meta_key`, `meta_value`) VALU
 (11, 7, '_wp_page_template', 'default'),
 (12, 7, 'mb_featured_banner', ''),
 (13, 7, 'mb_image_gallery', ''),
-(14, 7, '_edit_lock', '1477515548:1'),
+(14, 7, '_edit_lock', '1477586690:1'),
 (15, 9, '_edit_last', '1'),
 (16, 9, '_wp_page_template', 'default'),
 (17, 9, 'mb_featured_banner', ''),
@@ -490,7 +492,24 @@ INSERT INTO `wp_postmeta` ( `meta_id`, `post_id`, `meta_key`, `meta_value`) VALU
 (164, 37, '_oembed_ec0cdf86f9e9089dbd9af14bf14f2fd4', '<iframe width="500" height="281" src="https://www.youtube.com/embed/njpfLwxDeks?feature=oembed" frameborder="0" allowfullscreen></iframe>'),
 (165, 37, '_oembed_time_ec0cdf86f9e9089dbd9af14bf14f2fd4', '1477519397'),
 (166, 37, 'mb_image_gallery', ''),
-(168, 37, '_dp_original', '36') ;
+(168, 37, '_dp_original', '36'),
+(169, 42, '_edit_last', '1'),
+(170, 42, '_edit_lock', '1477586905:1'),
+(171, 43, '_wp_attached_file', '2016/10/sample-post.jpg'),
+(172, 43, 'wpmf_size', '62767'),
+(173, 43, 'wpmf_filetype', 'jpg'),
+(174, 43, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:640;s:6:"height";i:496;s:4:"file";s:23:"2016/10/sample-post.jpg";s:5:"sizes";a:4:{s:9:"thumbnail";a:4:{s:4:"file";s:23:"sample-post-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:23:"sample-post-300x233.jpg";s:5:"width";i:300;s:6:"height";i:233;s:9:"mime-type";s:10:"image/jpeg";}s:14:"post-thumbnail";a:4:{s:4:"file";s:23:"sample-post-210x210.jpg";s:5:"width";i:210;s:6:"height";i:210;s:9:"mime-type";s:10:"image/jpeg";}s:17:"custom-blog-image";a:4:{s:4:"file";s:23:"sample-post-452x350.jpg";s:5:"width";i:452;s:6:"height";i:350;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}'),
+(175, 42, '_thumbnail_id', '43'),
+(178, 42, 'mb_image_gallery', ''),
+(179, 1, '_wp_trash_meta_status', 'publish'),
+(180, 1, '_wp_trash_meta_time', '1477587053'),
+(181, 1, '_wp_desired_post_slug', 'hola-mundo'),
+(182, 1, '_wp_trash_meta_comments_status', 'a:1:{i:1;s:1:"1";}'),
+(183, 46, '_edit_last', '1'),
+(184, 46, '_edit_lock', '1477587064:1'),
+(185, 46, '_thumbnail_id', '43'),
+(186, 46, 'mb_image_gallery', ''),
+(187, 46, '_dp_original', '42') ;
 
 #
 # End of data contents of table `wp_postmeta`
@@ -538,20 +557,20 @@ CREATE TABLE `wp_posts` (
   KEY `type_status_date` (`post_type`,`post_status`,`post_date`,`ID`),
   KEY `post_parent` (`post_parent`),
   KEY `post_author` (`post_author`)
-) ENGINE=InnoDB AUTO_INCREMENT=38 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=48 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 
 #
 # Data contents of table `wp_posts`
 #
 INSERT INTO `wp_posts` ( `ID`, `post_author`, `post_date`, `post_date_gmt`, `post_content`, `post_title`, `post_excerpt`, `post_status`, `comment_status`, `ping_status`, `post_password`, `post_name`, `to_ping`, `pinged`, `post_modified`, `post_modified_gmt`, `post_content_filtered`, `post_parent`, `guid`, `menu_order`, `post_type`, `post_mime_type`, `comment_count`) VALUES
-(1, 1, '2016-10-26 20:18:29', '2016-10-26 20:18:29', 'Bienvenido a WordPress. Esta es su primera entrada. Edítela o bórrela, y ¡empiece a escribir!', '¡Hola mundo!', '', 'publish', 'open', 'open', '', 'hola-mundo', '', '', '2016-10-26 20:18:29', '2016-10-26 20:18:29', '', 0, 'http://localhost/raymiled/?p=1', 0, 'post', '', 1),
+(1, 1, '2016-10-26 20:18:29', '2016-10-26 20:18:29', 'Bienvenido a WordPress. Esta es su primera entrada. Edítela o bórrela, y ¡empiece a escribir!', '¡Hola mundo!', '', 'trash', 'open', 'open', '', 'hola-mundo__trashed', '', '', '2016-10-27 16:50:53', '2016-10-27 16:50:53', '', 0, 'http://localhost/raymiled/?p=1', 0, 'post', '', 1),
 (2, 1, '2016-10-26 20:18:29', '2016-10-26 20:18:29', 'Esto es una página de ejemplo. Es diferente a una entrada del blog, ya que permanecerá fija en un lugar y se mostrará en la navegación de su sitio (en la mayoría de temas). La mayoría de personas empieza con una página Acerca de, que brinda información a los visitantes de su sitio. Se podría decir algo como esto:\n\n<blockquote>¡Hola! Durante el día soy un mensajero, un aspirante a actor por la noche, y este es mi blog. Vivo en Lima, tengo un enorme perro llamado Pocho, y me gusta el Pisco Sour. (Y caminar bajo la lluvia.)</blockquote>\n\n...o algo como esto:\n\n<blockquote>La compañía XYZ, se fundó en 1971, y ha estado desde entonces, proporcionando artilugios de calidad al público. Está situado en la ciudad de Lima, XYZ emplea a más de 2,000 personas y hace todo tipo de cosas sorprendentes para la comunidad limeña.</blockquote>\n\nComo nuevo usuario de WordPress, usted debe ir a <a href="http://localhost/raymiled/wp-admin/">su panel</a> para eliminar esta página y crear nuevas para su contenido. ¡Que se divierta!', 'Página de ejemplo', '', 'trash', 'closed', 'open', '', 'pagina-de-ejemplo__trashed', '', '', '2016-10-26 21:01:11', '2016-10-26 21:01:11', '', 0, 'http://localhost/raymiled/?page_id=2', 0, 'page', '', 0),
 (3, 1, '2016-10-26 20:19:20', '0000-00-00 00:00:00', '', 'Borrador automático', '', 'auto-draft', 'open', 'open', '', '', '', '', '2016-10-26 20:19:20', '0000-00-00 00:00:00', '', 0, 'http://localhost/raymiled/?p=3', 0, 'post', '', 0),
 (4, 1, '2016-10-26 21:01:11', '2016-10-26 21:01:11', 'Esto es una página de ejemplo. Es diferente a una entrada del blog, ya que permanecerá fija en un lugar y se mostrará en la navegación de su sitio (en la mayoría de temas). La mayoría de personas empieza con una página Acerca de, que brinda información a los visitantes de su sitio. Se podría decir algo como esto:\n\n<blockquote>¡Hola! Durante el día soy un mensajero, un aspirante a actor por la noche, y este es mi blog. Vivo en Lima, tengo un enorme perro llamado Pocho, y me gusta el Pisco Sour. (Y caminar bajo la lluvia.)</blockquote>\n\n...o algo como esto:\n\n<blockquote>La compañía XYZ, se fundó en 1971, y ha estado desde entonces, proporcionando artilugios de calidad al público. Está situado en la ciudad de Lima, XYZ emplea a más de 2,000 personas y hace todo tipo de cosas sorprendentes para la comunidad limeña.</blockquote>\n\nComo nuevo usuario de WordPress, usted debe ir a <a href="http://localhost/raymiled/wp-admin/">su panel</a> para eliminar esta página y crear nuevas para su contenido. ¡Que se divierta!', 'Página de ejemplo', '', 'inherit', 'closed', 'closed', '', '2-revision-v1', '', '', '2016-10-26 21:01:11', '2016-10-26 21:01:11', '', 2, 'http://localhost/raymiled/2016/10/26/2-revision-v1/', 0, 'revision', '', 0),
 (5, 1, '2016-10-26 21:01:20', '2016-10-26 21:01:20', '', 'Inicio', '', 'publish', 'closed', 'closed', '', 'inicio', '', '', '2016-10-26 21:01:20', '2016-10-26 21:01:20', '', 0, 'http://localhost/raymiled/?page_id=5', 0, 'page', '', 0),
 (6, 1, '2016-10-26 21:01:20', '2016-10-26 21:01:20', '', 'Inicio', '', 'inherit', 'closed', 'closed', '', '5-revision-v1', '', '', '2016-10-26 21:01:20', '2016-10-26 21:01:20', '', 5, 'http://localhost/raymiled/2016/10/26/5-revision-v1/', 0, 'revision', '', 0),
-(7, 1, '2016-10-26 21:01:29', '2016-10-26 21:01:29', '', 'Nosotros', '', 'publish', 'closed', 'closed', '', 'nosotros', '', '', '2016-10-26 21:01:29', '2016-10-26 21:01:29', '', 0, 'http://localhost/raymiled/?page_id=7', 0, 'page', '', 0),
+(7, 1, '2016-10-26 21:01:29', '2016-10-26 21:01:29', 'ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\r\n\r\n&nbsp;', 'Nosotros', 'Dale vida a tu evento y contrata nuestra pista iluminada !!!', 'publish', 'closed', 'closed', '', 'nosotros', '', '', '2016-10-27 16:27:39', '2016-10-27 16:27:39', '', 0, 'http://localhost/raymiled/?page_id=7', 0, 'page', '', 0),
 (8, 1, '2016-10-26 21:01:29', '2016-10-26 21:01:29', '', 'Nosotros', '', 'inherit', 'closed', 'closed', '', '7-revision-v1', '', '', '2016-10-26 21:01:29', '2016-10-26 21:01:29', '', 7, 'http://localhost/raymiled/2016/10/26/7-revision-v1/', 0, 'revision', '', 0),
 (9, 1, '2016-10-26 21:01:38', '2016-10-26 21:01:38', '', 'Pisos Led', '', 'publish', 'closed', 'closed', '', 'pisos-led', '', '', '2016-10-26 21:01:38', '2016-10-26 21:01:38', '', 0, 'http://localhost/raymiled/?page_id=9', 0, 'page', '', 0),
 (10, 1, '2016-10-26 21:01:38', '2016-10-26 21:01:38', '', 'Pisos Led', '', 'inherit', 'closed', 'closed', '', '9-revision-v1', '', '', '2016-10-26 21:01:38', '2016-10-26 21:01:38', '', 9, 'http://localhost/raymiled/2016/10/26/9-revision-v1/', 0, 'revision', '', 0),
@@ -580,7 +599,17 @@ INSERT INTO `wp_posts` ( `ID`, `post_author`, `post_date`, `post_date_gmt`, `pos
 (34, 1, '2016-10-26 21:48:56', '2016-10-26 21:48:56', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 'Stand', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 'publish', 'closed', 'closed', '', 'stand', '', '', '2016-10-26 21:49:06', '2016-10-26 21:49:06', '', 0, 'http://localhost/raymiled/?post_type=theme-services&#038;p=34', 0, 'theme-services', '', 0),
 (35, 1, '2016-10-26 22:03:19', '2016-10-26 22:03:19', 'https://www.youtube.com/watch?v=njpfLwxDeks', 'Video 1 fiesta', '', 'publish', 'closed', 'closed', '', 'video-1-fiesta', '', '', '2016-10-26 22:03:19', '2016-10-26 22:03:19', '', 0, 'http://localhost/raymiled/?post_type=theme-videos&#038;p=35', 0, 'theme-videos', '', 0),
 (36, 1, '2016-10-26 22:03:27', '2016-10-26 22:03:27', 'https://www.youtube.com/watch?v=njpfLwxDeks', 'Video 2 fiesta', '', 'publish', 'closed', 'closed', '', 'video-2-fiesta', '', '', '2016-10-26 22:03:35', '2016-10-26 22:03:35', '', 0, 'http://localhost/raymiled/?post_type=theme-videos&#038;p=36', 0, 'theme-videos', '', 0),
-(37, 1, '2016-10-26 22:35:41', '2016-10-26 22:35:41', 'https://www.youtube.com/watch?v=njpfLwxDeks', 'Video 2 fiesta', '', 'publish', 'closed', 'closed', '', 'video-2-fiesta-2', '', '', '2016-10-26 22:35:51', '2016-10-26 22:35:51', '', 0, 'http://localhost/raymiled/?post_type=theme-videos&#038;p=37', 0, 'theme-videos', '', 0) ;
+(37, 1, '2016-10-26 22:35:41', '2016-10-26 22:35:41', 'https://www.youtube.com/watch?v=njpfLwxDeks', 'Video 2 fiesta', '', 'publish', 'closed', 'closed', '', 'video-2-fiesta-2', '', '', '2016-10-26 22:35:51', '2016-10-26 22:35:51', '', 0, 'http://localhost/raymiled/?post_type=theme-videos&#038;p=37', 0, 'theme-videos', '', 0),
+(38, 1, '2016-10-27 16:17:14', '2016-10-27 16:17:14', '', 'Nosotros', 'Dale vida a tu evento y contrata nuestra pista iluminada !!!', 'inherit', 'closed', 'closed', '', '7-revision-v1', '', '', '2016-10-27 16:17:14', '2016-10-27 16:17:14', '', 7, 'http://localhost/raymiled/2016/10/27/7-revision-v1/', 0, 'revision', '', 0),
+(39, 1, '2016-10-27 16:27:11', '2016-10-27 16:27:11', 'ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\r\n\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\r\n\r\n&nbsp;', 'Nosotros', 'Dale vida a tu evento y contrata nuestra pista iluminada !!!', 'inherit', 'closed', 'closed', '', '7-revision-v1', '', '', '2016-10-27 16:27:11', '2016-10-27 16:27:11', '', 7, 'http://localhost/raymiled/2016/10/27/7-revision-v1/', 0, 'revision', '', 0),
+(40, 1, '2016-10-27 16:27:16', '2016-10-27 16:27:16', 'ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n\n&nbsp;', 'Nosotros', 'Dale vida a tu evento y contrata nuestra pista iluminada !!!', 'inherit', 'closed', 'closed', '', '7-autosave-v1', '', '', '2016-10-27 16:27:16', '2016-10-27 16:27:16', '', 7, 'http://localhost/raymiled/2016/10/27/7-autosave-v1/', 0, 'revision', '', 0),
+(41, 1, '2016-10-27 16:27:39', '2016-10-27 16:27:39', 'ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\r\n\r\n&nbsp;', 'Nosotros', 'Dale vida a tu evento y contrata nuestra pista iluminada !!!', 'inherit', 'closed', 'closed', '', '7-revision-v1', '', '', '2016-10-27 16:27:39', '2016-10-27 16:27:39', '', 7, 'http://localhost/raymiled/2016/10/27/7-revision-v1/', 0, 'revision', '', 0),
+(42, 1, '2016-10-27 16:50:44', '2016-10-27 16:50:44', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\r\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\r\ncillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\r\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\r\ncillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 'Pisos Led en tus eventos', '', 'publish', 'open', 'open', '', 'pisos-led-en-tus-eventos', '', '', '2016-10-27 16:50:44', '2016-10-27 16:50:44', '', 0, 'http://localhost/raymiled/?p=42', 0, 'post', '', 0),
+(43, 1, '2016-10-27 16:50:32', '2016-10-27 16:50:32', '', 'sample-post', '', 'inherit', 'open', 'closed', '', 'sample-post', '', '', '2016-10-27 16:50:32', '2016-10-27 16:50:32', '', 42, 'http://localhost/raymiled/wp-content/uploads/2016/10/sample-post.jpg', 0, 'attachment', 'image/jpeg', 0),
+(44, 1, '2016-10-27 16:50:44', '2016-10-27 16:50:44', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\r\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\r\ncillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\r\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\r\ncillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 'Pisos Led en tus eventos', '', 'inherit', 'closed', 'closed', '', '42-revision-v1', '', '', '2016-10-27 16:50:44', '2016-10-27 16:50:44', '', 42, 'http://localhost/raymiled/2016/10/27/42-revision-v1/', 0, 'revision', '', 0),
+(45, 1, '2016-10-27 16:50:53', '2016-10-27 16:50:53', 'Bienvenido a WordPress. Esta es su primera entrada. Edítela o bórrela, y ¡empiece a escribir!', '¡Hola mundo!', '', 'inherit', 'closed', 'closed', '', '1-revision-v1', '', '', '2016-10-27 16:50:53', '2016-10-27 16:50:53', '', 1, 'http://localhost/raymiled/2016/10/27/1-revision-v1/', 0, 'revision', '', 0),
+(46, 1, '2016-10-27 16:50:57', '2016-10-27 16:50:57', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\r\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\r\ncillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\r\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\r\ncillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 'Pisos Led en tus eventos', '', 'publish', 'open', 'open', '', 'pisos-led-en-tus-eventos-2', '', '', '2016-10-27 16:51:03', '2016-10-27 16:51:03', '', 0, 'http://localhost/raymiled/?p=46', 0, 'post', '', 0),
+(47, 1, '2016-10-27 16:51:03', '2016-10-27 16:51:03', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\r\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\r\ncillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\r\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\r\ncillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 'Pisos Led en tus eventos', '', 'inherit', 'closed', 'closed', '', '46-revision-v1', '', '', '2016-10-27 16:51:03', '2016-10-27 16:51:03', '', 46, 'http://localhost/raymiled/2016/10/27/46-revision-v1/', 0, 'revision', '', 0) ;
 
 #
 # End of data contents of table `wp_posts`
@@ -622,7 +651,10 @@ INSERT INTO `wp_term_relationships` ( `object_id`, `term_taxonomy_id`, `term_ord
 (25, 3, 0),
 (26, 3, 0),
 (29, 4, 0),
-(32, 5, 0) ;
+(32, 5, 0),
+(42, 1, 0),
+(43, 7, 0),
+(46, 1, 0) ;
 
 #
 # End of data contents of table `wp_term_relationships`
@@ -651,18 +683,20 @@ CREATE TABLE `wp_term_taxonomy` (
   PRIMARY KEY (`term_taxonomy_id`),
   UNIQUE KEY `term_id_taxonomy` (`term_id`,`taxonomy`),
   KEY `taxonomy` (`taxonomy`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 
 #
 # Data contents of table `wp_term_taxonomy`
 #
 INSERT INTO `wp_term_taxonomy` ( `term_taxonomy_id`, `term_id`, `taxonomy`, `description`, `parent`, `count`) VALUES
-(1, 1, 'category', '', 0, 1),
+(1, 1, 'category', '', 0, 2),
 (2, 2, 'wpmf-category', '', 0, 0),
 (3, 3, 'nav_menu', '', 0, 8),
 (4, 4, 'wpmf-category', '', 0, 1),
-(5, 5, 'wpmf-category', '', 0, 0) ;
+(5, 5, 'wpmf-category', '', 0, 0),
+(6, 6, 'wpmf-category', '', 0, 0),
+(7, 7, 'wpmf-category', '', 6, 0) ;
 
 #
 # End of data contents of table `wp_term_taxonomy`
@@ -721,7 +755,7 @@ CREATE TABLE `wp_terms` (
   PRIMARY KEY (`term_id`),
   KEY `slug` (`slug`(191)),
   KEY `name` (`name`(191))
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 
 #
@@ -732,7 +766,9 @@ INSERT INTO `wp_terms` ( `term_id`, `name`, `slug`, `term_group`) VALUES
 (2, 'Sin categoría', 'sin-categoria', 0),
 (3, 'Menú Principal', 'menu-principal', 0),
 (4, 'SLIDER HOME', 'slider-home', 1),
-(5, 'SERVICIOS', 'servicios', 1) ;
+(5, 'SERVICIOS', 'servicios', 1),
+(6, 'ENTRADAS - BLOG', 'entradas-blog', 1),
+(7, 'OCTUBRE 2016', 'octubre-2016', 1) ;
 
 #
 # End of data contents of table `wp_terms`
@@ -759,7 +795,7 @@ CREATE TABLE `wp_usermeta` (
   PRIMARY KEY (`umeta_id`),
   KEY `user_id` (`user_id`),
   KEY `meta_key` (`meta_key`(191))
-) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 
 #
@@ -780,13 +816,17 @@ INSERT INTO `wp_usermeta` ( `umeta_id`, `user_id`, `meta_key`, `meta_value`) VAL
 (12, 1, 'dismissed_wp_pointers', ''),
 (13, 1, 'show_welcome_panel', '1'),
 (15, 1, 'wp_dashboard_quick_press_last_post_id', '3'),
-(16, 1, 'session_tokens', 'a:2:{s:64:"9418e20bae409bd8d7a79b7e21145767be8e6c2ed91d681e0b716a2dc550c171";a:4:{s:10:"expiration";i:1477688035;s:2:"ip";s:3:"::1";s:2:"ua";s:101:"Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36";s:5:"login";i:1477515235;}s:64:"e36224a4d52c98ba71f5bdcfbb70c6fe5c4e3e0c53f34eeb8f23be85f6653efd";a:4:{s:10:"expiration";i:1477688446;s:2:"ip";s:3:"::1";s:2:"ua";s:101:"Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36";s:5:"login";i:1477515646;}}'),
+(16, 1, 'session_tokens', 'a:7:{s:64:"9418e20bae409bd8d7a79b7e21145767be8e6c2ed91d681e0b716a2dc550c171";a:4:{s:10:"expiration";i:1477688035;s:2:"ip";s:3:"::1";s:2:"ua";s:101:"Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36";s:5:"login";i:1477515235;}s:64:"e36224a4d52c98ba71f5bdcfbb70c6fe5c4e3e0c53f34eeb8f23be85f6653efd";a:4:{s:10:"expiration";i:1477688446;s:2:"ip";s:3:"::1";s:2:"ua";s:101:"Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36";s:5:"login";i:1477515646;}s:64:"7a026246d0639f4e552a10bf1daf20bb4b4d80e56a8579f64ded8549aae9c9af";a:4:{s:10:"expiration";i:1477757765;s:2:"ip";s:3:"::1";s:2:"ua";s:101:"Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36";s:5:"login";i:1477584965;}s:64:"e2041cc403825d5c2a9ea660560f37dcaedc31fed35e7279c9c800579499f009";a:4:{s:10:"expiration";i:1477763237;s:2:"ip";s:3:"::1";s:2:"ua";s:101:"Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36";s:5:"login";i:1477590437;}s:64:"b9dacee78d8c8f85e328195c7de092321fc57d51c50a16d93d89e5707f3fbf32";a:4:{s:10:"expiration";i:1477766144;s:2:"ip";s:3:"::1";s:2:"ua";s:101:"Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36";s:5:"login";i:1477593344;}s:64:"08601766865b792e89fcab3055d6e42c510ebf6b658857eb739f856aa863ec13";a:4:{s:10:"expiration";i:1477775121;s:2:"ip";s:3:"::1";s:2:"ua";s:101:"Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36";s:5:"login";i:1477602321;}s:64:"1d372d3a20e60c849ef61e79389cd72b9f768444a84191cc0f3a61348e79d9d1";a:4:{s:10:"expiration";i:1477776768;s:2:"ip";s:3:"::1";s:2:"ua";s:101:"Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36";s:5:"login";i:1477603968;}}'),
 (17, 1, 'managenav-menuscolumnshidden', 'a:5:{i:0;s:11:"link-target";i:1;s:11:"css-classes";i:2;s:3:"xfn";i:3;s:11:"description";i:4;s:15:"title-attribute";}'),
 (18, 1, 'metaboxhidden_nav-menus', 'a:10:{i:0;s:25:"add-post-type-slider-home";i:1;s:28:"add-post-type-theme-services";i:2;s:28:"add-post-type-theme-products";i:3;s:26:"add-post-type-theme-images";i:4;s:26:"add-post-type-theme-videos";i:5;s:30:"add-post-type-theme-promotions";i:6;s:25:"add-post-type-theme-staff";i:7;s:12:"add-post_tag";i:8;s:15:"add-post_format";i:9;s:19:"add-images_category";}'),
 (19, 1, 'wp_user-settings', 'libraryContent=browse'),
 (20, 1, 'wp_user-settings-time', '1477516331'),
 (21, 1, 'meta-box-order_theme-services', 'a:3:{s:4:"side";s:53:"submitdiv,tagsdiv-post_tag,pageparentdiv,postimagediv";s:6:"normal";s:58:"postexcerpt,mb_attached_images_meta_box,postcustom,slugdiv";s:8:"advanced";s:0:"";}'),
-(22, 1, 'screen_layout_theme-services', '2') ;
+(22, 1, 'screen_layout_theme-services', '2'),
+(23, 1, 'closedpostboxes_page', 'a:0:{}'),
+(24, 1, 'metaboxhidden_page', 'a:5:{i:0;s:10:"postcustom";i:1;s:16:"commentstatusdiv";i:2;s:11:"commentsdiv";i:3;s:7:"slugdiv";i:4;s:9:"authordiv";}'),
+(25, 1, 'meta-box-order_page', 'a:3:{s:4:"side";s:60:"mb_featured_banner_mbox,submitdiv,pageparentdiv,postimagediv";s:6:"normal";s:97:"postcustom,postexcerpt,mb_attached_images_meta_box,commentstatusdiv,commentsdiv,slugdiv,authordiv";s:8:"advanced";s:0:"";}'),
+(26, 1, 'screen_layout_page', '2') ;
 
 #
 # End of data contents of table `wp_usermeta`
