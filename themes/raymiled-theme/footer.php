@@ -26,7 +26,7 @@ $options = get_option("theme_settings");
 
 				<!-- Logo -->
 				<h2 id="logo-footer">
-					<img src="<?= IMAGES ?>/logo_spa.png" alt="<?php bloginfo('description'); ?>" class="img-fluid d-block m-x-auto" />
+					<img src="<?= IMAGES ?>/logo.png" alt="<?php bloginfo('description'); ?>" class="img-fluid d-block m-x-auto" />
 				</h2> <!-- /.logo -->
 
 				<!-- Texto Presentación -->
@@ -35,11 +35,6 @@ $options = get_option("theme_settings");
 
 					echo $text_footer;
 				?>  
-
-				<br />
-
-				<!-- Texto web -->
-				<div class="text-web text-uppercase"> www.aguaspa.com </div>
 
 			</div> <!-- /.itemFooter -->
 
@@ -50,7 +45,25 @@ $options = get_option("theme_settings");
 
 				<!-- Menu de Datos -->
 				<ul class="menuContactoFooter">
-							
+					
+					<!-- Celulares -->	
+					<li>
+						<!-- Icon -->
+						<i class="fa fa-whatsapp" aria-hidden="true"></i>
+
+						<?php  
+							for ( $i=1 ;  $i <= 5 ;  $i++) 
+							{ 
+								$cel = isset($options['theme_cel_text_'.$i]) ? $options['theme_cel_text_'.$i] : '';
+
+								echo $i !== 1 && !empty($cel) ? ' - ' : '';
+								echo $cel;
+
+							}
+						?>
+					</li>
+
+					<!-- Teléfonos -->
 					<li>
 						<!-- Icon -->
 						<i class="fa fa-phone" aria-hidden="true"></i>
@@ -77,6 +90,11 @@ $options = get_option("theme_settings");
 
 				<!-- Menu redes sociales -->
 				<?php include( locate_template('partials/social/menu-footer-social.php') ); ?>
+
+				<br/>
+
+				<!-- Texto web -->
+				<div class="text-web"> www.raymipistasled.com </div>
 
 			</div> <!-- /.itemFooter -->
 
@@ -106,7 +124,7 @@ $options = get_option("theme_settings");
 
 				<!-- Desarrollo -->
 				<div class="mainFooter__develop">
-					<?= '&copy; ' . date('Y') . ' AGUA SPA Derechos reservados Desing by'; ?>
+					<?= '&copy; ' . date('Y') . ' RAYMIPISTASLED Derechos reservados Desing by'; ?>
 					<a href="http://www.ingenioart.com/" target="_blank"> INGENIOART</a>
 				</div>
 

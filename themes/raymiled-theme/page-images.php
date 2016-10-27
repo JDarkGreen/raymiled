@@ -29,26 +29,15 @@ include( locate_template('partials/banner-top-page.php') );
 /*
  * Obtener todos las galerías
  */ 
-	$args  = array(
-		'posts_per_page' => -1,
-		'post_type'      => 'theme-images',
-		'order'          => 'ASC',
-		'orderby'        => 'menu_order',
-		'post_status'    => 'publish'
-	);
-	
-	$gal_images = get_posts( $args );
+$args  = array(
+	'posts_per_page' => -1,
+	'post_type'      => 'theme-images',
+	'order'          => 'ASC',
+	'orderby'        => 'menu_order',
+	'post_status'    => 'publish'
+);
 
-/**
-  * Escoger la primera galeria
-  */
-$the_gallery = $gal_images[0];
-
-/**
-  * Enviar el parametro id a la funcion customizada galeria
-  */
-
-$gallery_post = get_gallery_post( $the_gallery->ID );
+$gal_images = get_posts( $args );
 
 ?>
 
@@ -58,15 +47,21 @@ $gallery_post = get_gallery_post( $the_gallery->ID );
 	<!-- Wrapper de Contenido / Contenedor Layout -->
 	<div class="pageWrapperLayout containerRelative">
 
-		<?php if( $gallery_post ) : ?>
+		<?php if( count($gal_images) > 0 ) : ?>
 			
 			<div class="containerFlex">
-				<?php foreach( $gallery_post as $image ) : ?>
+				<?php foreach( $gal_images as $image ) : ?>
+
+				<?php if( has_post_thumbnail($image->ID) ) : ?>
+
+					<?php  
+						$url_image = wp_get_attachment_url( get_post_thumbnail_id($image->ID) );
+					?>
 				
 				<!-- Imagen -->
-				<a href="<?= $image->guid; ?>" class="itemPreviewImage containerRelative gallery-fancybox" rel="galeria-images">
+				<a href="<?= $url_image; ?>" class="itemPreviewImage containerRelative gallery-fancybox" title="<?= $image->post_title; ?>" rel="galeria-images">
 					
-					<figure class="featured-image" style="background-image : url(<?= $image->guid; ?>)"></figure> <!-- /itemPreviewImage -->
+					<figure class="featured-image" style="background-image : url(<?= $url_image; ?>)"></figure> <!-- /itemPreviewImage -->
 
 					<!-- Icono on hover -->
 					<span class="icon-zoom containerFlex containerAlignContent">
@@ -76,8 +71,11 @@ $gallery_post = get_gallery_post( $the_gallery->ID );
 
 				</a> <!-- /gallery fancybox -->
 
+				<?php endif; ?>
+
 				<?php endforeach; ?>
-			</div>
+			
+			</div> <!-- /. -->
 
 		<?php endif; ?>
 

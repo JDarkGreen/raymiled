@@ -17,19 +17,19 @@ $the_title = isset($banner_title) && !empty($banner_title) ? $banner_title : $th
 //El id de banner
 $id_banner = isset($banner) && !empty($banner) ? $banner->ID : get_queried_object_id();
 
+//url de Imágen 
+$url_image = has_banner_page( $id_banner ) ? get_banner_page( $id_banner ) : 'https://unsplash.it/1920/314/?random';
 
-/**
-  * Renderizando el banner
-  */
-	
-	if( has_banner_page( $id_banner ) ) :
+/*
+ * Renderizando el banner
+ */
 ?>
 
 	<!-- Banner top de Página -->
 	<section class="pageCommon__banner containerRelative">
 
 		<!-- Imagen -->
-		<img src="<?= get_banner_page( $id_banner ) ?>" alt="<?php bloginfo('description') ?>" class="img-fluid d-block m-x-auto" />
+		<img src="<?= $url_image; ?>" alt="<?php bloginfo('description') ?>" class="img-fluid d-block m-x-auto" />
 		
 		<!-- Título -->
 		<h2 class="title-page text-uppercase"> 
@@ -38,7 +38,6 @@ $id_banner = isset($banner) && !empty($banner) ? $banner->ID : get_queried_objec
 
 	</section> <!-- /.pageCommon__banner -->
 
-<?php endif; ?>
 
 
 

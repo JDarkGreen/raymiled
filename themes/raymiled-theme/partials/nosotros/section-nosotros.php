@@ -9,6 +9,9 @@
  */
 $page_nosotros = get_page_by_title('Nosotros');
 
+//Link de Página
+$page_nosotros_link = !empty($page_nosotros) ? get_permalink($page_nosotros->ID) : '#';
+
 /*
  * Extraer opciones del tema
  */
@@ -24,17 +27,22 @@ $options = get_option("theme_settings");
 	<!-- Wrapper de Contenido / Contenedor Layout -->
 	<div class="pageWrapperLayout containerRelative">
 		
-		<div class="row containerFlex containerAlignContent">
+		<div class="row containerFlex">
 			
 			<!-- Apertura -->
 			<div class="col-xs-12 col-sm-3">
 
 				<!-- titulo -->
-				<h2 class="title text-uppercase"> <?= __('horarios de apertura:'); ?> 
+				<h2 class="title text-capitalize"> 
+					Raymi <br/> Led
 				</h2>
 
 				<!-- Contenido -->
 				<?= apply_filters( 'the_content' , $page_nosotros->post_content ); ?>
+
+				<!-- Botón ver Más -->
+				<a href="<?= $page_nosotros_link; ?>" class="btn-show-more text-uppercase"> 
+				<?= __('leer más'); ?> </a>
 
 			</div> <!-- /.col-xs-12 col-sm-3 -->
 
@@ -62,10 +70,12 @@ $options = get_option("theme_settings");
 		<!-- Comentario Extra -->
 		<div id="comment-extra">
 
-			<span class="date d-block"> <em> <?php the_modified_date('d F, Y'); ?> 
-			</em> </span> <br/>
+			<!--span class="date d-block"> <em> <?php the_modified_date('d F, Y'); ?> 
+			</em> </span> <br/-->
 
-			<h3 class="text-uppercase"> <?= $page_nosotros->post_excerpt ?> </h3>
+			<h3 class="text-uppercase"> 
+				<?= !empty($page_nosotros->post_excerpt) ? $page_nosotros->post_excerpt : 'Dale vida a tu evento y contrata nuestra pista iluminada !!!'; ?> 
+			</h3>
 			
 		</div> <!-- /.comment-extra -->
 

@@ -41,7 +41,7 @@
 	<div class="pageWrapperLayout containerRelative">
 		
 		<!-- Título -->
-		<h2 class="titleCommon__section text-xs-center"> 
+		<h2 class="titleCommon__section text-uppercase text-xs-center"> 
 		<span> Nosotros </span> </h2>
 
 	</div> <!-- /.pageWrapperLayout containerRelative -->

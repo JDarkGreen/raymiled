@@ -27,7 +27,18 @@ function load_admin_custom_enqueue() {
 
 	//configuraciones generales de acuerdo a las librerias usadas anteriormente
 	wp_enqueue_style( 'wp-css-custom-theme-admin', THEMEROOT . "/admin/assets/css/custom-theme-admin.css" );
-	wp_enqueue_script('wp-js-custom-theme-admin', THEMEROOT . '/admin/assets/js/custom-theme-admin.js', array('jquery' ), '', true);
+
+	//Registrar script
+	wp_register_script( 'wp-js-custom-theme-admin' , THEMEROOT . '/admin/assets/js/custom-theme-admin.js' , array('jquery') , '1.0' , true );
+
+	//Localización enviar nueva data
+	$theme_data = array(
+		'themeroot' => THEMEROOT
+	);
+
+	//Asignar
+	wp_localize_script( 'wp-js-custom-theme-admin' , 'data' , $theme_data );
+	wp_enqueue_script('wp-js-custom-theme-admin');
 
 
 	/**

@@ -38,7 +38,7 @@ var j = jQuery.noConflict();
 			});
 
 			//Enviar por ajax este objeto
-			j.post( '../wp-content/themes/aqua_custom_theme/admin/update-options-ajax.php' , {
+			j.post( data.themeroot + '/admin/update-options-ajax.php' , {
 
 				options_theme : options
 

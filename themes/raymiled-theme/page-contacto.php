@@ -35,7 +35,7 @@ include( locate_template('partials/banner-top-page.php') );
 	<section class="sectionContainerContact">
 
 		<!-- Subtitulo -->
-		<h4 class="subtitle-contact text-xs-center"> <?= __( 'Estar en contacto' , LANG ); ?></h4>
+		<h4 class="subtitle-contact text-xs-center"> <?= __( 'Llámanos y solicita tu presupuesto ya!' , LANG ); ?></h4>
 
 		<!-- Título -->
 		<h2 class="title-contact text-xs-center text-uppercase"> <?= __( 'como encontrarnos' , LANG ); ?> </h2>
@@ -96,6 +96,44 @@ include( locate_template('partials/banner-top-page.php') );
 					<!-- Email -->
 					<p class="featured">
 						<?= isset($options['theme_email_text']) ? $options['theme_email_text'] : ''; ?>
+					</p>
+
+					<!-- Celulares -->	
+					<p>
+						<!-- Icon -->
+						<i class="fa fa-whatsapp" aria-hidden="true"></i>
+
+						<?php  
+							for ( $i=1 ;  $i <= 5 ;  $i++) 
+							{ 
+								$cel = isset($options['theme_cel_text_'.$i]) ? $options['theme_cel_text_'.$i] : '';
+
+								$cel = preg_replace('/\s+/','',$cel);
+
+								echo $i !== 1 && $cel !== '' ? ' - ' : '';
+								echo $cel;
+
+							}
+						?>
+					</p>
+
+					<!-- Teléfonos -->
+					<p>
+						<!-- Icon -->
+						<i class="fa fa-phone" aria-hidden="true"></i>
+
+						<?php  
+							for ( $i=1 ;  $i <= 5 ;  $i++) 
+							{ 
+								$phone = isset($options['theme_phone_text_'.$i]) ? $options['theme_phone_text_'.$i] : '';
+
+								$phone = preg_replace('/\s+/','',$phone);
+
+								echo $i !== 1 && $phone !== '' ? ' - ' : '';
+								echo $phone;
+
+							}
+						?>
 					</p>
 					
 				</div> <!-- /.itemContact -->

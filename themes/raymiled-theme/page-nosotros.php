@@ -33,12 +33,6 @@ include( locate_template('partials/banner-top-page.php') );
 include( locate_template('partials/nosotros/section-nosotros.php') );
 
 
-/*
- * Importar Sección Staff
- */
-
-include( locate_template('partials/nosotros/section-staff.php') );
-
 ?>
 
 

@@ -23,7 +23,7 @@ $options = get_option("theme_settings");
 
 	<?php if( has_facebook() ) : ?>
 
-	<div class="fb-page" data-href="<?= get_facebook() ?>" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-height="515" data-hide-cover="false" data-show-facepile="true"><blockquote cite="<?= get_facebook() ?>" class="fb-xfbml-parse-ignore"><a href="<?= get_facebook() ?>"> Aqua Spa </a></blockquote></div>
+	<div class="fb-page" data-href="<?= get_facebook() ?>" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-height="464" data-hide-cover="false" data-show-facepile="true"><blockquote cite="<?= get_facebook() ?>" class="fb-xfbml-parse-ignore"><a href="<?= get_facebook() ?>"> <?= get_bloginfo('name'); ?> </a></blockquote></div>
 	
 	<?php endif; ?>
 

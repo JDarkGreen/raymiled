@@ -3,13 +3,13 @@
 /*----------------------------------------------------------------------------------*/
 
 footer#mainFooter
-	background: black
+	background: #2E2A18
 	padding   : 35px 0 0 0
 
 //Logo Footer
 #logo-footer
-	margin   : 0 auto 25px
-	max-width: 140px
+	margin   : 0 auto 29px
+	max-width: 200px
 
 /** Item Footer **/
 .itemFooter
@@ -18,15 +18,18 @@ footer#mainFooter
 	padding     : 0 35px 21px
 	width       : calc(100% / 3)
 	//Primer elemento
+	&:nth-child(1)
+		padding: 0 22px 21px
+	//Tercer elemento
 	&:nth-child(3)
 		border-right: none
 	
 	//Títulos
 	h2.title-footer
 		color      : #fff
-		font-family: "Montserrat",sans-serif
+		font-family: "Open Sans",sans-serif
 		font-size  : 18px
-		font-weight: 700
+		font-weight: 300
 		margin     : 0 auto 43px
 
 	//Parrafos
@@ -56,7 +59,7 @@ ul.menuContactoFooter
 			width : 14px
 		//Featured style 
 		&.featured
-			color : #7FC1A4
+			color : #FF9500
 
 
 /**[ Datos de Redes Sociales ]**/
@@ -99,10 +102,10 @@ ul#menu-footer-social-link
 
 /**[ Texto Web ]**/
 .text-web
-	color    : #7FC1A4
+	color    : #FF9500
 	font-size: 18px
 
 //++Seccion de Desarrollo
 .mainFooter__develop , .mainFooter__develop a
-	color    : #7FC1A4
+	color    : #FF9500
 	font-size: 13px

@@ -39,7 +39,8 @@ include( locate_template('partials/banner-top-page.php') );
 	<div class="container-text">
 
 		<!-- Título -->
-		<h2 class="titleCommon__section text-xs-center"> <span> <?= $post->post_title; ?> </span> </h2>
+		<h2 class="titleCommon__section text-xs-center"> 
+		<?= $post->post_title; ?> </h2>
 
 		<!-- Espacio --> <br/>
 

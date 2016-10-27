@@ -58,7 +58,7 @@
 	width     : calc( (100%/3) - ( (2*23px) / 3) )
 
 	//Terceros y últimos elementos
-	&:last-child , &:nth-child(3)
+	&:last-child , &:nth-child(3n)
 		margin-right : 0
 
 	//Imágen
@@ -77,7 +77,7 @@
 		font-family: "Arial" , sans-serif
 		font-size  : 15px
 		h2 
-			font-family: "Montserrat" , sans-serif
+			font-family: "Open Sans" , sans-serif
 			color      : #595959
 			font-size  : 22px 
 			font-weight: 600
@@ -94,6 +94,10 @@
 		margin           : 0 
 		max-width        : 820px
 		width            : 100%
+
+	//Sobrescribir título
+	.titleCommon__section
+		color : black
 
 	//Texto
 	.container-text

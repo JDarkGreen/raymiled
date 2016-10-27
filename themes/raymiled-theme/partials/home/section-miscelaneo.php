@@ -17,7 +17,8 @@
 				<div id="container-article-preview">
 					
 					<!-- Título -->
-					<h2 class="title"> <span>Blog</span> </h2>
+					<h2 class="titleCommon__section text-uppercase"> 
+					<span> <?= __('blog',LANG) ?> </span> </h2>
 
 					<?php  
 						//Obtener entradas recientes
@@ -61,6 +62,8 @@
 
 							echo $content;
 						?>
+						
+						<!-- Limpiar floats --> <div class="clearfix"></div>
 
 						<a href="<?= get_permalink( $entrada->ID ); ?>" class="read-more"> Leer Más </a>
 						
@@ -76,7 +79,8 @@
 			<div class="col-xs-12 col-sm-4">
 
 				<!-- Título -->
-				<h2 class="title"> <span>Facebook</span> </h2>
+				<h2 class="titleCommon__section text-uppercase"> 
+				<span> <?= __('facebook',LANG) ?> </span> </h2>
 				
 				<!-- Facebook  -->
 				<?php include( locate_template('partials/fan-page-facebook.php') ) ?>
