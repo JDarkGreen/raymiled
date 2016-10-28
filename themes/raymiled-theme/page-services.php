@@ -80,7 +80,12 @@ $the_query = new WP_Query( $args );
 						<h2 class="text-capitalize"><?= get_the_title(); ?></h2>
 
 						<!-- Extracto -->
-						<p class="excerpt"> <?= get_the_excerpt(); ?> </p>
+						<p class="excerpt"> 
+							<?php  
+								$excerpt = wp_strip_all_tags( get_the_content() );
+								$excerpt = wp_trim_words( $excerpt , 25 , '...' );
+								echo $excerpt; ?>
+						</p>
 						
 						<!-- Botón -->
 						<a href="<?= get_permalink(); ?>" class="btn-show-more text-uppercase"><?= __('leer más' , LANG ); ?></a>
