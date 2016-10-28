@@ -26,6 +26,13 @@
 		</li>
 	<?php endif; ?>	
 
+	<!-- Si existe youtube -->
+	<?php if( has_youtube() ) : ?>
+		<li class="link-youtube">
+			<a href="<?= get_youtube(); ?>" target="_blank"><i class="fa fa-youtube"></i></a>
+		</li>
+	<?php endif; ?>	
+
 	<!-- Si existe linkedin -->
 	<?php if( has_linkedin() ) : ?>
 		<li class="linkedin">
