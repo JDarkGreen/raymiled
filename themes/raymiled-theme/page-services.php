@@ -36,17 +36,14 @@ $paged = get_query_var('paged') ? get_query_var('paged') : 1;
  * Obtener todos los servicios
  */ 
 $args  = array(
-	'posts_per_page' => $posts_per_page,
+	'posts_per_page' => -1,
 	'post_type'      => 'theme-services',
-	'paged'          => $paged,
 	'order'          => 'ASC',
 	'orderby'        => 'menu_order',
 	'post_status'    => 'publish',
 );
 	
-$the_query = new WP_Query( $args ); 
-
-?>
+$the_query = new WP_Query( $args ); ?>
 
 <!-- Contenedor Sección -->
 <section class="sectionContainerService">
@@ -101,6 +98,7 @@ $the_query = new WP_Query( $args );
 		<!-- Limpiar Floats --> <div class="clearfix"></div>
 
 		<!-- Paginación aquí -->
+		<?php /*
 		<section class="sectionPagination text-xs-center">
 
 			<?php $max_pages = $the_query->max_num_pages; ?>
@@ -116,8 +114,8 @@ $the_query = new WP_Query( $args );
 			<a href="<?= get_pagenum_link($paged+1); ?>" class="<?= $paged == $max_pages ? 'disabled' : '' ?>" role="button" aria-disabled="<?= $paged == $max_pages ? 'true' : '' ?>">
 				<!-- Icon --><i class="fa fa-long-arrow-right" aria-hidden="true"></i>
 			</a>
-			
 		</section> <!-- /.sectionPagination -->
+		 */ ?>
 
 		<?php endif; wp_reset_postdata(); ?>
 

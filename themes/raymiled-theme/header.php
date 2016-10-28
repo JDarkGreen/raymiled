@@ -16,7 +16,12 @@
 
 	<title><?php wp_title('|', true, 'right'); ?><?php bloginfo('name'); ?></title>
 
-	<meta name="description" content="<?php bloginfo('description'); ?>" />
+	<?php  
+		$mb_descrption = get_post_meta( get_the_ID() , '_yoast_wpseo_metadesc' , true );
+		$mb_descrption = !empty($mb_descrption) ? $mb_descrption : get_the_title();
+	?>
+
+	<meta name="description" content="<?= $mb_descrption; ?>" />
 	<meta name="author" content="" />
 
 	<!-- Mobile Specific Meta -->

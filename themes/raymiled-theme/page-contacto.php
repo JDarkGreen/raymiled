@@ -37,6 +37,8 @@ include( locate_template('partials/banner-top-page.php') );
 		<!-- Subtitulo -->
 		<h4 class="subtitle-contact text-xs-center"> <?= __( 'Llámanos y solicita tu presupuesto ya!' , LANG ); ?></h4>
 
+		<!-- Espacio --> <br/>
+
 		<!-- Título -->
 		<h2 class="title-contact text-xs-center text-uppercase"> <?= __( 'como encontrarnos' , LANG ); ?> </h2>
 
@@ -90,14 +92,6 @@ include( locate_template('partials/banner-top-page.php') );
 					<!-- Título -->
 					<h2 class="text-uppercase"> <?= __( 'contactos' , LANG ); ?> </h2>
 
-					<!-- Informacion Dirección -->
-					<?= isset($options['theme_address_text']) ? apply_filters('the_content' , $options['theme_address_text'] ) : ''; ?>
-					
-					<!-- Email -->
-					<p class="featured">
-						<?= isset($options['theme_email_text']) ? $options['theme_email_text'] : ''; ?>
-					</p>
-
 					<!-- Celulares -->	
 					<p>
 						<!-- Icon -->
@@ -136,6 +130,14 @@ include( locate_template('partials/banner-top-page.php') );
 						?>
 					</p>
 					
+					<!-- Email -->
+					<p class="featured">
+						<?= isset($options['theme_email_text']) ? $options['theme_email_text'] : ''; ?>
+					</p>
+
+					<!-- Informacion Dirección -->
+					<?= isset($options['theme_address_text']) ? apply_filters('the_content' , $options['theme_address_text'] ) : ''; ?>
+					
 				</div> <!-- /.itemContact -->
 				
 			</div> <!-- /.col-xs-12 col-sm-4 -->
@@ -147,11 +149,13 @@ include( locate_template('partials/banner-top-page.php') );
 	  		if( exist_map() ) : ?> <div id="canvas-map"></div>
 		<?php endif; ?>	
 
+		<!-- Espacio --> <br/><br/>
+
 		<!-- Formulario -->
 		<form id="form-contacto" class="pageContacto__form" method="POST">
 
 			<!-- Title -->
-			<h2 class="text-uppercase title-formulary text-xs-center"> <?= __( '¿tiene alguna pregunta?' , LANG ); ?> </h2>
+			<h2 class="text-uppercase title-formulary text-xs-center"> <?= __( '¿tiene alguna consulta?' , LANG ); ?> </h2>
 
 			<!-- Nombre -->
 			<div class="pageContacto__form__group">

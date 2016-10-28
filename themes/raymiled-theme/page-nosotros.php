@@ -40,7 +40,7 @@ include( locate_template('partials/banner-top-page.php') );
 
 				<!-- titulo -->
 				<h2 class="title title--gray text-capitalize"> 
-					Raymi <br/> Led
+					Raymi Led
 				</h2>
 
 				<!-- Contenido -->

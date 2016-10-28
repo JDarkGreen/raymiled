@@ -97,6 +97,41 @@ $gallery_images = get_gallery_post( $post->ID ); ?>
 
 				<div class="content-information content-information--margin">
 					<?= apply_filters( 'the_content' , $post->post_content ); ?>
+
+					<!-- Celulares -->	
+					<p>
+						<!-- Icon -->
+						<i class="fa fa-whatsapp" aria-hidden="true"></i>
+
+						<?php 
+							for ( $i=1 ;  $i <= 5 ;  $i++) 
+							{ 
+								$cel = isset($options['theme_cel_text_'.$i]) ? $options['theme_cel_text_'.$i] : '';
+
+								echo $i !== 1 && !empty($cel) ? ' - ' : '';
+								echo $cel;
+
+							}
+						?>
+					</p>
+
+					<!-- Teléfonos -->
+					<p>
+						<!-- Icon -->
+						<i class="fa fa-phone" aria-hidden="true"></i>
+
+						<?php  
+							for ( $i=1 ;  $i <= 5 ;  $i++) 
+							{ 
+								$phone = isset($options['theme_phone_text_'.$i]) ? $options['theme_phone_text_'.$i] : '';
+
+								echo $i !== 1 && !empty($phone) ? ' - ' : '';
+								echo $phone;
+
+							}
+						?>
+					</p>
+
 				</div> <!-- content-information -->
 
 			</div> <!-- /.col-xs-12 col-sm-6 -->
