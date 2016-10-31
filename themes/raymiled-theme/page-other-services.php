@@ -114,7 +114,8 @@ $gallery_images = get_gallery_post( $post->ID ); ?>
 							}
 						?>
 					</p>
-
+					
+				<?php /*
 					<!-- Teléfonos -->
 					<p>
 						<!-- Icon -->
@@ -131,6 +132,8 @@ $gallery_images = get_gallery_post( $post->ID ); ?>
 							}
 						?>
 					</p>
+
+					*/ ?>
 
 				</div> <!-- content-information -->
 
