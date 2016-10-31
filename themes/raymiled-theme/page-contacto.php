@@ -112,6 +112,7 @@ include( locate_template('partials/banner-top-page.php') );
 					</p>
 
 					<!-- Teléfonos -->
+					<?php /*
 					<p>
 						<!-- Icon -->
 						<i class="fa fa-phone" aria-hidden="true"></i>
@@ -128,7 +129,7 @@ include( locate_template('partials/banner-top-page.php') );
 
 							}
 						?>
-					</p>
+					</p> */ ?>
 					
 					<!-- Email -->
 					<p class="featured">

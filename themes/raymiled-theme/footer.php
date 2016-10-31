@@ -64,6 +64,7 @@ $options = get_option("theme_settings");
 					</li>
 
 					<!-- Teléfonos -->
+					<?php /*
 					<li>
 						<!-- Icon -->
 						<i class="fa fa-phone" aria-hidden="true"></i>
@@ -78,7 +79,7 @@ $options = get_option("theme_settings");
 
 							}
 						?>
-					</li>
+					</li> */ ?>
 
 					<!-- Email -->
 					<li class="featured">

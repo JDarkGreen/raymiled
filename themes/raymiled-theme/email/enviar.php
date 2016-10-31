@@ -24,7 +24,7 @@
 	/*
 	 * Añadidos de Prueba
 	 */
-	$webmaster_email2 = "sara190778@hotmail.com";
+	$webmaster_email2 = "raymipistasledperu@gmail.com";
 	$webmaster_email3 = "jgomez@ingenioart.com";
 
 	include("class.phpmailer.php");
@@ -40,7 +40,7 @@
 	$mail->Host      = 'smtp.gmail.com';  // Specify main and backup SMTP servers
 	$mail->Port      = 465;
 	$mail->SMTPAuth  = true; // turn on SMTP authentication
-	$mail->Username  = ""; // Enter your SMTP username
+	$mail->Username  = "raymipistasledperu@gmail.com"; // Enter your SMTP username
 	$mail->Password  = ""; // SMTP password 
 
 	/*
